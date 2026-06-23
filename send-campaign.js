@@ -15,6 +15,7 @@ const RESEND_KEY    = process.env.RESEND_API_KEY;
 const GITHUB_TOKEN  = process.env.GITHUB_TOKEN;
 const REPO          = "alonbraun/genetic-testing-hub";
 const FROM          = "Alon Braun <hello@genetictesting.com>";
+const REPLY_TO      = "info@genetictesting.com";
 const QA_EMAIL      = "alon@riverbanks.com";
 const DELAY_MS      = 3000;
 const SENT_LOG_PATH     = path.join(__dirname, "content/campaigns/sent-leads.json");
@@ -35,7 +36,7 @@ function isGenomics(lead) {
   return GENOMICS_KEYWORDS.some(k => text.includes(k));
 }
 
-const CSV_PATH = process.argv[2] || path.join(process.env.HOME, "Downloads/apollo-contacts-export.csv");
+const CSV_PATH = process.argv[2] || path.join(process.env.HOME, "Downloads/apollo-contacts-export-4.csv");
 const QA_MODE  = process.argv.includes("--qa");
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -347,6 +348,7 @@ async function sendEmail(lead, subject, body, qaMode) {
     },
     {
       from: FROM,
+      reply_to: REPLY_TO,
       to: [`${toName} <${toEmail}>`],
       subject: qaMode ? `[QA] ${subject}` : subject,
       text: body,
@@ -468,6 +470,20 @@ async function main() {
       skipped++;
       continue;
     }
+
+    // Preview email — require explicit approval before sending
+    console.log("\n   ┌─ EMAIL PREVIEW " + "─".repeat(32));
+    console.log(`   │ To:       ${lead.name} <${lead.email}>`);
+    console.log(`   │ Subject:  ${subject}`);
+    console.log(`   │ Reply-To: ${REPLY_TO}`);
+    console.log("   │");
+    body.split("\n").slice(0, 8).forEach(line => console.log(`   │ ${line}`));
+    if (body.split("\n").length > 8) console.log("   │ [...]");
+    console.log("   └" + "─".repeat(48));
+
+    const approve = await ask("   Send this email? (y/n/q to quit): ");
+    if (approve === "q") { console.log("\nStopped by user."); break; }
+    if (approve !== "y") { console.log("   Skipped."); skipped++; continue; }
 
     process.stdout.write("   Sending...");
     try {
