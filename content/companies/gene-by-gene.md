@@ -1,12 +1,12 @@
 ---
 name: Gene by Gene
 slug: gene-by-gene
-category: Consumer DNA Testing
-description: Gene by Gene offers DNA testing services including ancestry, paternity, and whole genome/exome sequencing for consumers and clinical applications.
+category: Clinical Diagnostics
+description: "Gene by Gene offers comprehensive genetic testing services including DNA ancestry analysis, paternity testing, and SNP/STR testing utilizing advanced gene sequencing technology. The company specializes in genetic genealogy solutions and SNP array analysis, serving individuals and professionals seeking detailed genetic information and ancestry insights."
 website: https://genebygene.com
-funding: $200,000
-location: Houston, Texas, United States
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-24
 ---
