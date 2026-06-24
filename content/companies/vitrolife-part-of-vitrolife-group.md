@@ -1,12 +1,12 @@
 ---
 name: Vitrolife, Part of Vitrolife Group
 slug: vitrolife-part-of-vitrolife-group
-category: Prenatal Testing
-description: Provides preimplantation genetic testing (PGT) solutions and IVF laboratory equipment including culture media and time-lapse imaging systems.
+category: Clinical Diagnostics
+description: "Vitrolife is a leading biotechnology company specializing in preimplantation genetic testing and quality control solutions for IVF procedures, serving fertility clinics and research institutions globally. The company manufactures and distributes medical equipment and supplies through B2B channels while maintaining rigorous standards in product development and biotechnology research."
 website: https://vitrolife.com
-funding: $20,000,000
-location: Gothenburg, Vaestra Goetaland County, Sweden
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-24
 ---
