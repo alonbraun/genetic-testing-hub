@@ -2,11 +2,11 @@
 name: Neogenomica
 slug: neogenomica
 category: Clinical Diagnostics
-description: Neogenomica provides next-generation sequencing and genetic variant analysis services for personalized medicine and clinical diagnostics.
+description: "Neogenomica is a Brazilian genetic testing company specializing in next-generation sequencing and personalized medicine solutions, with expertise in immunology and comprehensive genetic variants analysis. The company provides medical and diagnostic laboratory services focused on identifying and analyzing regulatory region variants to support precision healthcare and clinical decision-making."
 website: https://neogenomica.com.br
-funding: Unknown
-location: Recife, State of Pernambuco, Brazil
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-24
 ---
