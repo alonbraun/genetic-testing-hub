@@ -2,11 +2,11 @@
 name: CORE Diagnostics
 slug: core-diagnostics
 category: Clinical Diagnostics
-description: CORE Diagnostics offers specialized genetic and molecular diagnostic tests across multiple medical specialties including oncology, prenatal, and organ-specific screening.
+description: "CORE Diagnostics is an Indian genetic testing company offering specialized diagnostic solutions across multiple medical domains through its product lines including NeuroCore, ColonCore, UroCore, GeneCore, AmninoCore, HemaCore, GastricCore, and DualCore. The company provides targeted genetic testing services designed to support clinical decision-making in neurology, oncology, urology, prenatal screening, hematology, and gastroenterology."
 website: https://corediagnostics.in
-funding: $51,150,000
-location: Gurugram, Haryana, India
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-24
 ---
