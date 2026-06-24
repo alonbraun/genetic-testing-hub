@@ -2,7 +2,7 @@
 name: Genomics England
 slug: genomics-england
 category: Clinical Diagnostics
-description: "Genomics England is a health service organization that delivers genomic testing and diagnostics through next-generation sequencing and whole genome sequencing technologies to advance precision medicine across oncology and genomic healthcare. The company specializes in collecting real-world evidence and managing the logistics of large-scale genomic testing programs to support improved patient outcomes and healthcare delivery."
+description: "Genomics England is a healthcare organization that delivers next generation sequencing and whole genome sequencing services to support diagnostic and genomic healthcare initiatives across the UK. The company specializes in oncology diagnostics, real world evidence generation, and logistics coordination for large-scale genomic testing programs."
 website: https://genomicsengland.co.uk
 funding: Private
 location: ""
