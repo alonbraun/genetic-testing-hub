@@ -2,7 +2,7 @@
 name: Foundation Medicine
 slug: foundation-medicine
 category: Clinical Diagnostics
-description: "Foundation Medicine is a leading precision oncology company that provides comprehensive genomic profiling and next-generation sequencing services to identify molecular information that enables personalized cancer treatment. The company specializes in cancer genomics and multiomics analysis, delivering actionable insights that support oncologists and patients in making informed treatment decisions."
+description: "Foundation Medicine is a leading precision oncology company that provides comprehensive genomic profiling and molecular information services to guide cancer treatment decisions through advanced next-generation sequencing technology. The company specializes in cancer genomics and multiomics analysis, enabling oncologists to deliver personalized, precision medicine approaches tailored to individual patient tumors."
 website: https://foundationmedicine.com
 funding: Private
 location: ""
