@@ -2,11 +2,11 @@
 name: Baylor Genetics
 slug: baylor-genetics
 category: Clinical Diagnostics
-description: Clinical laboratory providing diagnostic genetic testing, carrier screening, and genome sequencing with genetic counseling services.
+description: "Baylor Genetics is a clinical laboratory offering comprehensive diagnostic testing, reproductive carrier screening, and genome sequencing services to support patient care and genetic counseling. The laboratory provides genetic testing and genomics expertise through qualified genetic counselors and specialized laboratory services for healthcare providers and patients."
 website: https://baylorgenetics.com
-funding: Unknown
-location: Houston, Texas, United States
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-24
 ---
