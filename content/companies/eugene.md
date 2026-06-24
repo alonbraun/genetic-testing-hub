@@ -2,11 +2,11 @@
 name: Eugene
 slug: eugene
 category: Clinical Diagnostics
-description: Eugene provides genetic testing and counseling services to identify inherited health conditions and guide proactive healthcare decisions.
+description: "Eugene is a genetic testing company that provides comprehensive health insights through advanced genetic analysis and personalized genetic counselling services. The company empowers individuals to take a proactive approach to their health and wellness by delivering actionable genetic information to support informed healthcare decisions."
 website: https://eugenelabs.com
-funding: $3,410,000
-location: Richmond, Victoria, Australia
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-24
 ---
