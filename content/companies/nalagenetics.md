@@ -2,11 +2,11 @@
 name: NalaGenetics
 slug: nalagenetics
 category: Clinical Diagnostics
-description: NalaGenetics provides personalized medicine and genetic testing services in Southeast Asia using qPCR technology and biobank collaboration.
+description: "NalaGenetics is a biotechnology company specializing in personalized medicine solutions across Southeast Asia, leveraging advanced qPCR technology and biobank collaboration to deliver genetic testing services. The company operates through both direct-to-consumer and research-focused channels, supporting biotechnology research and enabling precision medicine applications in the region."
 website: https://nalagenetics.com
-funding: $13,600,000
-location: Singapore, Singapore
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-24
 ---
