@@ -22,12 +22,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${geist.variable} h-full`} style={{ colorScheme: "light" }}>
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-CGX764956B" strategy="afterInteractive" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3KY81PM6M7" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-CGX764956B');
+          gtag('config', 'G-3KY81PM6M7');
         `}</Script>
       </head>
       <body className="min-h-full flex flex-col bg-white text-gray-900 font-[family-name:var(--font-geist-sans)]">
