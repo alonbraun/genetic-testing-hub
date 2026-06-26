@@ -2,6 +2,8 @@ import { getFileBySlug, getAllFiles, getFiles } from "@/lib/content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return getFiles("companies").map((f) => ({ slug: f.replace(".md", "") }));
 }
@@ -51,6 +53,11 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
   const icon = CATEGORY_ICONS[company.category] || "🧬";
 
   const paragraphs = (company.content || "").split(/\n\n+/).filter(Boolean);
+  const tests: string[] = Array.isArray(company.tests)
+    ? company.tests
+    : typeof company.tests === "string"
+    ? company.tests.split(",").map((t: string) => t.trim()).filter(Boolean)
+    : [];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -94,6 +101,16 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
           <div className="bg-white rounded-2xl border border-gray-100 p-7">
             <h2 className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-4">Overview</h2>
             <p className="text-gray-700 text-base leading-relaxed font-medium mb-5">{company.description}</p>
+            {tests.length > 0 && (
+              <div className="border-t border-gray-50 pt-5">
+                <p className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-3">Tests offered</p>
+                <div className="flex flex-wrap gap-2">
+                  {tests.map((t) => (
+                    <span key={t} className="text-xs bg-[#e8f5ee] text-[#0d4a2a] border border-[#0d4a2a]/15 px-3 py-1 rounded-full font-medium">{t}</span>
+                  ))}
+                </div>
+              </div>
+            )}
             {paragraphs.length > 0 && (
               <div className="space-y-4 border-t border-gray-50 pt-5">
                 {paragraphs.map((p: string, i: number) => (
