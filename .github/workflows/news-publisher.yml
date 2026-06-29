@@ -2,7 +2,7 @@ name: GeneticTesting News Agent
 
 on:
   schedule:
-    - cron: '0 8 * * 1,3,5'  # Mon, Wed, Fri at 8am UTC
+    - cron: '0 8 * * *'  # Daily at 8am UTC
   workflow_dispatch:
 
 permissions:
@@ -20,47 +20,137 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          pip install anthropic
+          pip install anthropic requests
           mkdir -p content/news
           python - <<'EOF'
-          import anthropic, datetime, os, re
+import anthropic, datetime, os, re, random, requests, xml.etree.ElementTree as ET
 
-          client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-          today = datetime.date.today().isoformat()
+client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+today = datetime.date.today().isoformat()
 
-          message = client.messages.create(
-              model="claude-sonnet-4-6",
-              max_tokens=1024,
-              messages=[{"role": "user", "content": f"""You are the content agent for GeneticTesting.com, the genetic testing industry portal.
+IMAGES = {
+    "Funding":  [
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+    ],
+    "Research": [
+        "https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1576086213369-2b32d5af1f3a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1200&q=80",
+    ],
+    "Product":  [
+        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    ],
+    "Policy":   [
+        "https://images.unsplash.com/photo-1529107386316-0d2ef31e7379?auto=format&fit=crop&w=1200&q=80",
+    ],
+    "Industry": [
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    ],
+}
 
-          Write ONE news article for today ({today}) about the genetic testing or genomics industry.
-          Focus on: funding rounds, product launches, research findings, FDA approvals, policy updates, or company milestones in genetic testing (consumer DNA testing, clinical diagnostics, oncology genomics, pharmacogenomics, prenatal testing, ancestry testing, genetic counseling, NIPT, precision medicine, etc.).
-          The article should be 350-450 words, written for industry professionals.
+QUERIES = [
+    "genetic testing startup funding",
+    "genomics company FDA approval",
+    "DNA testing technology",
+    "precision medicine genomics",
+    "pharmacogenomics clinical",
+    "liquid biopsy cancer screening",
+    "prenatal genetic testing",
+]
 
-          Return ONLY a markdown file with this exact frontmatter, nothing else:
+headlines = []
+seen = set()
+for q in QUERIES:
+    try:
+        url = f"https://news.google.com/rss/search?q={requests.utils.quote(q)}&hl=en-US&gl=US&ceid=US:en"
+        r = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+        root = ET.fromstring(r.content)
+        for item in root.findall(".//item")[:3]:
+            title = item.findtext("title", "").strip()
+            desc = item.findtext("description", "").strip()
+            pub = item.findtext("pubDate", "").strip()
+            key = title[:60]
+            if key and key not in seen:
+                seen.add(key)
+                headlines.append(f"- {title} ({pub})\n  Summary: {desc[:200]}")
+    except Exception as e:
+        print(f"RSS error for '{q}': {e}")
 
-          ---
-          title: "Article title here"
-          date: {today}
-          category: Funding | Product | Research | Policy | Industry
-          excerpt: "One sentence summary (under 160 chars)"
-          sponsored: false
-          ---
+if not headlines:
+    headlines = ["No live headlines — write about a current genomics industry trend."]
+headlines_text = "\n".join(headlines[:12])
+print(f"Fetched {len(headlines)} headlines")
 
-          Article body here (350-450 words). Use ## for 2-3 section headings to break up the article (e.g. ## Background, ## What This Means, ## Looking Ahead). Write paragraphs as plain text — no bullet lists, no bold/italic inline.
-          """}]
-          )
+existing_titles = []
+news_dir = "content/news"
+for fname in sorted(os.listdir(news_dir), reverse=True)[:14]:
+    try:
+        with open(os.path.join(news_dir, fname)) as f:
+            m = re.search(r'title:\s*"([^"]+)"', f.read())
+            if m: existing_titles.append(m.group(1))
+    except: pass
+existing_text = "\n".join(f"- {t}" for t in existing_titles) or "None"
 
-          content = message.content[0].text.strip()
-          title_match = re.search(r'title: "([^"]+)"', content)
-          title = title_match.group(1) if title_match else "genetic-testing-news"
-          slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:60]
-          filename = f"content/news/{today}-{slug}.md"
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1400,
+    messages=[{"role": "user", "content": f"""You are the senior editor of GeneticTesting.com, the leading B2B portal for the genetic testing and genomics industry.
 
-          with open(filename, 'w') as f:
-              f.write(content)
-          print(f"Created: {filename}")
-          EOF
+Today is {today}. Here are REAL recent headlines from the genetic testing and genomics space:
+
+{headlines_text}
+
+Recently published articles — DO NOT cover these topics again:
+{existing_text}
+
+Pick ONE headline genuinely about genetic testing or genomics (consumer DNA testing, clinical genomics, pharmacogenomics, liquid biopsy, NGS platforms, prenatal testing, oncology genomics, FDA approvals for genetic tests, precision medicine). Skip general biotech, pharma, or unrelated diagnostics.
+
+Write a 420-480 word industry news article for genomics professionals. Requirements:
+- Base the article on what the headline and summary tell you — do not fabricate specific numbers or quotes not in the source
+- Use EXACTLY 3 section headings formatted as: ## Heading Text
+- Good headings: ## Why This Matters, ## The Technology, ## Clinical Context, ## What's Next, ## Market Impact
+- Write substantive paragraphs — no bullet lists, no bold/italic inline
+- End with a forward-looking sentence about what this means for the genetic testing industry
+
+Return ONLY a markdown file. Start with the frontmatter block, then the body. No preamble.
+
+---
+title: "Specific, compelling headline about the news"
+date: {today}
+category: Funding | Product | Research | Policy | Industry
+excerpt: "One concrete sentence summarizing the news (under 160 chars)"
+sponsored: false
+image: PLACEHOLDER
+---
+
+[Article body with 3 ## headings, 420-480 words]
+"""}]
+)
+
+content = message.content[0].text.strip()
+if content.startswith("```"):
+    content = re.sub(r'^```(?:markdown)?\s*', '', content, flags=re.MULTILINE)
+    content = re.sub(r'\s*```$', '', content.strip())
+
+cat_match = re.search(r'category:\s*(\w+)', content)
+category = cat_match.group(1) if cat_match else "Industry"
+image_url = random.choice(IMAGES.get(category, IMAGES["Industry"]))
+content = content.replace("image: PLACEHOLDER", f"image: {image_url}")
+
+title_match = re.search(r'title:\s*"([^"]+)"', content)
+title = title_match.group(1) if title_match else "genetic-testing-news"
+slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:60]
+filename = f"{news_dir}/{today}-{slug}.md"
+
+with open(filename, 'w') as f:
+    f.write(content)
+print(f"Created: {filename}")
+print(f"Title: {title}")
+print(f"Image: {image_url}")
+EOF
 
       - name: Commit and push
         run: |
@@ -69,3 +159,6 @@ jobs:
           git add content/news/
           git diff --staged --quiet || git commit -m "feat: publish news article $(date +%Y-%m-%d)"
           git push
+
+      - name: Trigger Netlify deploy
+        run: curl -s -X POST https://api.netlify.com/build_hooks/6a3df39b5b6b9c722d8afb29
