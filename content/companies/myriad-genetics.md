@@ -1,12 +1,12 @@
 ---
 name: Myriad Genetics
 slug: myriad-genetics
-category: Clinical Diagnostics
-description: Myriad Genetics is a leading molecular diagnostic company specializing in hereditary cancer testing, including BRCA1/2 testing, as well as tests for hereditary heart disease, epilepsy, and mental health pharmacogenomics.
-website: https://www.myriad.com
-funding: Public (MYGN)
-location: Salt Lake City, UT
+category: Genetic Testing
+description: Myriad Genetics is a molecular diagnostics company that develops and offers genetic testing services for hereditary cancer, cardiovascular conditions, and pharmacogenomic applications. The company provides laboratory-developed tests and companion diagnostic products to help clinicians and patients make informed medical decisions based on genetic information.
+website: http://www.myriad.com
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-30
 ---
