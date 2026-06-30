@@ -1,12 +1,12 @@
 ---
 name: Mendelics
 slug: mendelics
-category: Clinical Diagnostics
-description: Mendelics provides genomic analysis and genetic disease diagnostics through bioinformatics platforms for clinical and research applications.
-website: https://mendelics.com
-funding: Unknown
-location: Sao Paulo, State of Sao Paulo, Brazil
+category: Genetic Testing
+description: Mendelics is a Brazilian genomics company specializing in genetic testing and interpretation services for clinical diagnostics and personalized medicine. The company provides whole exome and whole genome sequencing analysis, along with genetic counseling support for patients and healthcare providers.
+website: http://www.mendelics.com
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-06-30
 ---
