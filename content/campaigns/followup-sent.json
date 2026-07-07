@@ -1,0 +1,848 @@
+[
+  {
+    "email": "luciana@genoox.com",
+    "company": "Franklin by QIAGEN",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:32.716Z"
+  },
+  {
+    "email": "khill@foundationmedicine.com",
+    "company": "Foundation Medicine",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:34.875Z"
+  },
+  {
+    "email": "daviddu@completegenomics.com",
+    "company": "Complete Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:37.161Z"
+  },
+  {
+    "email": "velko@sanogenetics.com",
+    "company": "Sano Genetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:39.358Z"
+  },
+  {
+    "email": "cdavis@billiontoone.com",
+    "company": "BillionToOne",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:41.561Z"
+  },
+  {
+    "email": "g.vanveldhoven@genomescan.nl",
+    "company": "GenomeScan",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:43.724Z"
+  },
+  {
+    "email": "alexis.nathaniel@prenetics.com",
+    "company": "Prenetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:45.728Z"
+  },
+  {
+    "email": "yudo@othram.com",
+    "company": "Othram Inc.",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:48.662Z"
+  },
+  {
+    "email": "ipalka@genedx.com",
+    "company": "GeneDx",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:50.669Z"
+  },
+  {
+    "email": "ajit.raju@medgenome.com",
+    "company": "MEDGENOME",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:53.093Z"
+  },
+  {
+    "email": "rwatanabe@alphabiolabs.com",
+    "company": "AlphaBiolabs",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:56.339Z"
+  },
+  {
+    "email": "rbloom@castlebiosciences.com",
+    "company": "Castle Biosciences, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-03T18:42:59.478Z"
+  },
+  {
+    "email": "john.chirico@genedx.com",
+    "company": "GeneDx",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:01.844Z"
+  },
+  {
+    "email": "ben.jackson@ogt.com",
+    "company": "OGT",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:04.113Z"
+  },
+  {
+    "email": "luke@eugenelabs.com",
+    "company": "Eugene",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:06.265Z"
+  },
+  {
+    "email": "diksha.raghaw@corediagnostics.in",
+    "company": "CORE Diagnostics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:08.754Z"
+  },
+  {
+    "email": "frederikh@23andme.com",
+    "company": "23andMe",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:12.423Z"
+  },
+  {
+    "email": "sprenenski@foundationmedicine.com",
+    "company": "Foundation Medicine",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:15.266Z"
+  },
+  {
+    "email": "egala@baylorgenetics.com",
+    "company": "Baylor Genetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:17.386Z"
+  },
+  {
+    "email": "klinden@genedx.com",
+    "company": "GeneDx",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:19.386Z"
+  },
+  {
+    "email": "abhijeet.goon@lilacinsights.com",
+    "company": "Lilac Insights",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:21.616Z"
+  },
+  {
+    "email": "bsvarczkopf@biocartis.com",
+    "company": "Biocartis",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:23.719Z"
+  },
+  {
+    "email": "courtney.eberhard@genebygene.com",
+    "company": "Gene by Gene",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:25.924Z"
+  },
+  {
+    "email": "ana.esteban@centogene.com",
+    "company": "CENTOGENE",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:27.924Z"
+  },
+  {
+    "email": "zubair.a@mapmygenome.in",
+    "company": "MapmyGenome - Know Yourself",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:29.895Z"
+  },
+  {
+    "email": "sophie.mclachlan@genomicsengland.co.uk",
+    "company": "Genomics England",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:31.958Z"
+  },
+  {
+    "email": "sergio.cafalli@neogenomica.com.br",
+    "company": "Neogenomica",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:38.695Z"
+  },
+  {
+    "email": "natasha.bunanta@nalagenetics.com",
+    "company": "NalaGenetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:41.787Z"
+  },
+  {
+    "email": "kumariankita@genesolutions.com",
+    "company": "Gene Solutions",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:44.136Z"
+  },
+  {
+    "email": "carleigh.peterson@variantyx.com",
+    "company": "Variantyx",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:46.316Z"
+  },
+  {
+    "email": "patterson.yeoh@yourgenehealth.com",
+    "company": "Yourgene Health",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:48.688Z"
+  },
+  {
+    "email": "carl.alexander@genomicsengland.co.uk",
+    "company": "Genomics England",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:51.098Z"
+  },
+  {
+    "email": "alistair.johnson@congenica.com",
+    "company": "Congenica",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:54.990Z"
+  },
+  {
+    "email": "michael.addley@genomicsengland.co.uk",
+    "company": "Genomics England",
+    "step": 1,
+    "sent_at": "2026-07-03T18:43:58.092Z"
+  },
+  {
+    "email": "aoshaughnessy@bionano.com",
+    "company": "Bionano",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:02.830Z"
+  },
+  {
+    "email": "francisco.rodriguez@vitrolifegroup.com",
+    "company": "Vitrolife, Part of Vitrolife Group",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:06.818Z"
+  },
+  {
+    "email": "ana.c@orchid-fertility.com",
+    "company": "Orchid IVF and Fertility Services",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:09.605Z"
+  },
+  {
+    "email": "jmirosevich@sophiagenetics.com",
+    "company": "SOPHiA GENETICS",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:11.853Z"
+  },
+  {
+    "email": "matteo.panfili@diatechpharmacogenetics.com",
+    "company": "Diatech Pharmacogenetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:15.029Z"
+  },
+  {
+    "email": "ayat.mamdouh@siparadigm.com",
+    "company": "sïParadigm Diagnostic Informatics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:17.379Z"
+  },
+  {
+    "email": "gabrielle.stauber@preventiongenetics.com",
+    "company": "PreventionGenetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:19.567Z"
+  },
+  {
+    "email": "bjohnson@exactsciences.com",
+    "company": "Exact Sciences",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:21.807Z"
+  },
+  {
+    "email": "sarah.oshasky@preventiongenetics.com",
+    "company": "PreventionGenetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:24.143Z"
+  },
+  {
+    "email": "valerie.worzella@preventiongenetics.com",
+    "company": "PreventionGenetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:26.225Z"
+  },
+  {
+    "email": "tina.horvath@geneidlab.com",
+    "company": "GeneID Lab, Advanced Molecular Diagnostics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:28.251Z"
+  },
+  {
+    "email": "pkumar@dnacenter.com",
+    "company": "DNA Diagnostics Center | Eurofins",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:30.260Z"
+  },
+  {
+    "email": "larry@premierdrugdnatesting.com",
+    "company": "Premier Drug & DNA Testing",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:32.535Z"
+  },
+  {
+    "email": "latrisha.m@peaceofmindpaternity.com",
+    "company": "Peace of Mind Paternity & DNA Testing",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:34.657Z"
+  },
+  {
+    "email": "simon.fleming@precisionformedicine.com",
+    "company": "Precision For Medicine",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:36.590Z"
+  },
+  {
+    "email": "david@mendelics.com",
+    "company": "Mendelics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:39.168Z"
+  },
+  {
+    "email": "tuan@genetica.asia",
+    "company": "GENETICA® US",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:41.430Z"
+  },
+  {
+    "email": "malcolm@mydnahealth.co.uk",
+    "company": "myDNAhealth",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:43.437Z"
+  },
+  {
+    "email": "lekhangda.ab@geneticcounsellingindia.com",
+    "company": "Genetic Counselling India LLP (GCIL)",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:45.925Z"
+  },
+  {
+    "email": "marko.bitenc@geneplanet.com",
+    "company": "GenePlanet",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:48.152Z"
+  },
+  {
+    "email": "shawn@pgxally.com",
+    "company": "PGxAlly",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:50.382Z"
+  },
+  {
+    "email": "noor@orchidhealth.com",
+    "company": "Orchid",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:53.147Z"
+  },
+  {
+    "email": "michelle@previvoredge.com",
+    "company": "Previvor Edge",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:55.645Z"
+  },
+  {
+    "email": "jorge.oliver@adntro.com",
+    "company": "ADNTRO GENETICS",
+    "step": 1,
+    "sent_at": "2026-07-03T18:44:58.133Z"
+  },
+  {
+    "email": "giordano@allelica.com",
+    "company": "Allelica, Inc",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:01.077Z"
+  },
+  {
+    "email": "johnsee@personalgx.com",
+    "company": "Personal Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:03.501Z"
+  },
+  {
+    "email": "michael.greene@gtcasolutions.com",
+    "company": "GenoTyping Center of America",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:06.087Z"
+  },
+  {
+    "email": "mileyko@oncoatlas.ru",
+    "company": "OncoAtlas",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:08.351Z"
+  },
+  {
+    "email": "kim@snipnutrition.com",
+    "company": "SNiP Nutrigenomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:10.778Z"
+  },
+  {
+    "email": "raj.jampa@myriad.com",
+    "company": "Myriad Genetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:13.605Z"
+  },
+  {
+    "email": "adamabdool@dxomeclia.com",
+    "company": "Dxome CLIA Laboratory",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:15.999Z"
+  },
+  {
+    "email": "gustavo@fetaladn.com",
+    "company": "fetalADN",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:18.293Z"
+  },
+  {
+    "email": "alper@cognidna.com",
+    "company": "cogniDNA",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:21.367Z"
+  },
+  {
+    "email": "nate.wilbourne@precisiongenetics.com",
+    "company": "Precision Genetics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:23.448Z"
+  },
+  {
+    "email": "afischer@genomind.com",
+    "company": "Genomind",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:25.392Z"
+  },
+  {
+    "email": "danstey@genomenon.com",
+    "company": "Genomenon, Inc",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:27.693Z"
+  },
+  {
+    "email": "grant.bitter@genomicexpress.com",
+    "company": "Genomic Express, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:29.855Z"
+  },
+  {
+    "email": "neerajgupta@genes2me.com",
+    "company": "G2M | Next Generation IVD solutions for Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:32.268Z"
+  },
+  {
+    "email": "gilad.almogy@ultimagen.com",
+    "company": "Ultima Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:35.005Z"
+  },
+  {
+    "email": "uira@lucid-genomics.com",
+    "company": "Lucid Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:37.617Z"
+  },
+  {
+    "email": "joel.sevinsky@theiagen.com",
+    "company": "Theiagen Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:39.850Z"
+  },
+  {
+    "email": "lawrence@swangenomics.com",
+    "company": "SWAN Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:42.013Z"
+  },
+  {
+    "email": "serge@10xgenomics.com",
+    "company": "10x Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:44.622Z"
+  },
+  {
+    "email": "jrafferty@ontariogenomics.ca",
+    "company": "Ontario Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:47.403Z"
+  },
+  {
+    "email": "ivan@phasegenomics.com",
+    "company": "Phase Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:49.605Z"
+  },
+  {
+    "email": "huy.nguyen@acuityspatialgenomics.com",
+    "company": "Bruker Spatial Genomics, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:51.711Z"
+  },
+  {
+    "email": "em@arnagenomics.com",
+    "company": "ARNA Genomics US Inc.",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:54.259Z"
+  },
+  {
+    "email": "g.michuki@tagccglobal.org",
+    "company": "The Africa Genomics Centre and Consultancy (TAGCC)",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:56.162Z"
+  },
+  {
+    "email": "frank.liu@bgi.com",
+    "company": "BGI Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:45:58.702Z"
+  },
+  {
+    "email": "mike@jumpcodegenomics.com",
+    "company": "Jumpcode Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:01.044Z"
+  },
+  {
+    "email": "squinn@curiogenomics.com",
+    "company": "CURIO Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:03.246Z"
+  },
+  {
+    "email": "psargeant@circulargenomics.com",
+    "company": "Circular Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:05.236Z"
+  },
+  {
+    "email": "tom.willis@arimagenomics.com",
+    "company": "Arima Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:07.524Z"
+  },
+  {
+    "email": "bgulko@progenicgenomics.com",
+    "company": "Progenic Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:09.633Z"
+  },
+  {
+    "email": "tao@paragongenomics.com",
+    "company": "Paragon Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:12.840Z"
+  },
+  {
+    "email": "leann@gapininstitute.com",
+    "company": "Gapin Institute for Precision Medicine",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:15.387Z"
+  },
+  {
+    "email": "jkikkert@razorgenomics.com",
+    "company": "Razor Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:18.355Z"
+  },
+  {
+    "email": "tim@rosalind.bio",
+    "company": "ROSALIND",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:20.715Z"
+  },
+  {
+    "email": "pedro.castro@exongenomics.com",
+    "company": "Exon Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:22.736Z"
+  },
+  {
+    "email": "stephane@variantbio.com",
+    "company": "Variant Bio",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:25.590Z"
+  },
+  {
+    "email": "dsks@eurofins.com",
+    "company": "Eurofins Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:27.686Z"
+  },
+  {
+    "email": "am73941@saphetor.com",
+    "company": "Saphetor",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:29.773Z"
+  },
+  {
+    "email": "gstazyk@fusiongenomics.com",
+    "company": "Fusion Genomics Corporation",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:32.191Z"
+  },
+  {
+    "email": "rliu@singleragenomics.com",
+    "company": "Singlera Genomics Incorporated",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:34.401Z"
+  },
+  {
+    "email": "bharat@heliogenomics.com",
+    "company": "Helio Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:36.516Z"
+  },
+  {
+    "email": "jkennedy@cantatabio.com",
+    "company": "Dovetail Genomics",
+    "step": 1,
+    "sent_at": "2026-07-03T18:46:38.956Z"
+  },
+  {
+    "email": "sherie@genieus.co",
+    "company": "GenieUs Genomics",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:19.252Z"
+  },
+  {
+    "email": "amit@basepairtech.com",
+    "company": "Basepair Inc",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:22.482Z"
+  },
+  {
+    "email": "sciambi@missionbio.com",
+    "company": "Mission Bio",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:24.814Z"
+  },
+  {
+    "email": "jeggington@genomicinterpretation.org",
+    "company": "Center for Genomic Interpretation",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:27.418Z"
+  },
+  {
+    "email": "ahmet@mygenomescreen.com",
+    "company": "My Genome Screen",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:29.519Z"
+  },
+  {
+    "email": "ken@genomelink.io",
+    "company": "Genomelink",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:31.522Z"
+  },
+  {
+    "email": "razik.yousfi@paige.ai",
+    "company": "Paige",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:33.620Z"
+  },
+  {
+    "email": "bready@nabsys.com",
+    "company": "Nabsys",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:35.347Z"
+  },
+  {
+    "email": "julia@soteriaone.com",
+    "company": "SOTERIA Precision Medicine Foundation, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:37.475Z"
+  },
+  {
+    "email": "jolene@myforeverdna.com",
+    "company": "My Forever DNA",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:39.329Z"
+  },
+  {
+    "email": "igal@permedna.com",
+    "company": "PERME DNA Profile",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:41.290Z"
+  },
+  {
+    "email": "clayton.conder@familytreedna.com",
+    "company": "FamilyTreeDNA",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:43.310Z"
+  },
+  {
+    "email": "jared@health-street.net",
+    "company": "Health Street",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:45.515Z"
+  },
+  {
+    "email": "austin@dynamicdnalabs.com",
+    "company": "Dynamic DNA Laboratories",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:47.691Z"
+  },
+  {
+    "email": "moni@dnalabs.ca",
+    "company": "DNALabs",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:50.420Z"
+  },
+  {
+    "email": "gilad.japhet@myheritage.com",
+    "company": "MyHeritage",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:52.512Z"
+  },
+  {
+    "email": "drarnond@geneusdna.com",
+    "company": "GeneusDNA",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:54.662Z"
+  },
+  {
+    "email": "katarina@lifedna.com",
+    "company": "LifeDNA",
+    "step": 1,
+    "sent_at": "2026-07-07T08:05:56.604Z"
+  },
+  {
+    "email": "sonia@absolutedna.com.au",
+    "company": "AbsoluteDNA",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:02.032Z"
+  },
+  {
+    "email": "mike.cariola@bodetech.com",
+    "company": "Bode Technology",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:07.288Z"
+  },
+  {
+    "email": "lois@dnapower.com",
+    "company": "dnaPower Inc.",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:11.368Z"
+  },
+  {
+    "email": "alain@dnalabsinternational.com",
+    "company": "DNA Labs International",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:14.506Z"
+  },
+  {
+    "email": "jshe@jinfiniti.com",
+    "company": "Jinfiniti Precision Medicine",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:17.366Z"
+  },
+  {
+    "email": "sdadgar@pmcdx.com",
+    "company": "Precision Medicine Care (PMC™)",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:19.558Z"
+  },
+  {
+    "email": "daltman@cxprecisionm.com",
+    "company": "Cx Precision Medicine, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:22.123Z"
+  },
+  {
+    "email": "steven@cpmed.io",
+    "company": "Continuous Precision Medicine",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:25.398Z"
+  },
+  {
+    "email": "brad@arizbio.com",
+    "company": "ARIZ Precision Medicine",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:28.210Z"
+  },
+  {
+    "email": "ram@citadelpm.io",
+    "company": "CITADEL PRECISION MEDICINE",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:30.166Z"
+  },
+  {
+    "email": "jordan@easymedstat.com",
+    "company": "Sciencer 🎯 Precision Medicine",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:32.658Z"
+  },
+  {
+    "email": "jody.simon@clarifiedmedicine.com",
+    "company": "Clarified Precision Medicine",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:34.867Z"
+  },
+  {
+    "email": "tomans@pillarbiosci.com",
+    "company": "Pillar Biosciences Incorporated",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:37.681Z"
+  },
+  {
+    "email": "andrew.barnell@geneoscopy.com",
+    "company": "Geneoscopy",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:39.748Z"
+  },
+  {
+    "email": "ot@2curex.com",
+    "company": "2cureX - Individualizing Cancer Treatment",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:41.613Z"
+  },
+  {
+    "email": "steven.everett@maverixoncology.com",
+    "company": "MaveriX Oncology, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:43.688Z"
+  },
+  {
+    "email": "azhang@diacarta.com",
+    "company": "DiaCarta, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:45.927Z"
+  },
+  {
+    "email": "sophiamurray@mgi-tech.com",
+    "company": "MGI",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:47.956Z"
+  },
+  {
+    "email": "dan.rhodes@strataoncology.com",
+    "company": "Strata Oncology",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:49.978Z"
+  },
+  {
+    "email": "jason@tailor.bio",
+    "company": "Tailor Bio",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:51.896Z"
+  },
+  {
+    "email": "hyoki.kim@celemics.com",
+    "company": "Celemics, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:54.269Z"
+  },
+  {
+    "email": "mcomneck@nextgenomixlab.com",
+    "company": "NEXT GENOMIX LABORATORIES, INC",
+    "step": 1,
+    "sent_at": "2026-07-07T08:06:56.584Z"
+  },
+  {
+    "email": "travis@decisionrx.com",
+    "company": "DecisionRx, Inc.",
+    "step": 1,
+    "sent_at": "2026-07-07T08:07:01.653Z"
+  }
+]

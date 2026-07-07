@@ -3,9 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 
 export const dynamicParams = true;
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  return getFiles("companies").map((f) => ({ slug: f.replace(".md", "") }));
+  return [];
 }
 
 const AVATAR_COLORS = [

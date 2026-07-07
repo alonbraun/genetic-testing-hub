@@ -3,8 +3,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import NewsImage from "@/components/NewsImage";
 
+export const dynamicParams = true;
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
-  return getFiles("news").map((f) => ({ slug: f.replace(".md", "") }));
+  return [];
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
