@@ -2,6 +2,7 @@ import { getFileBySlug, getFiles } from "@/lib/content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import NewsImage from "@/components/NewsImage";
+import SubscribeInline from "./SubscribeInline";
 
 export const dynamicParams = true;
 export const revalidate = 86400;
@@ -41,6 +42,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           return <p key={i} className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: rendered }} />;
         })}
       </div>
+      <SubscribeInline />
     </div>
   );
 }
