@@ -1,12 +1,12 @@
 ---
 name: FitnessGenes
 slug: fitnessgenes
-category: Consumer DNA Testing
-description: FitnessGenes provides genetic testing and personalized fitness, nutrition, and training recommendations based on individual genetic profiles.
-website: https://fitnessgenes.com
-funding: $6,500,000
-location: Bicester, England, United Kingdom
+category: Genetic Testing
+description: FitnessGenes provides personalized fitness and nutrition recommendations based on DNA analysis, helping individuals optimize their training and dietary plans according to their genetic predispositions. The company uses genetic testing to identify traits related to muscle response, fat metabolism, and recovery capacity to create customized wellness programs.
+website: http://www.fitnessgenes.com
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-09
 ---
