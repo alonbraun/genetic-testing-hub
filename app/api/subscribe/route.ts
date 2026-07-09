@@ -1,9 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const hits = new Map<string, number[]>();
+function rateLimited(ip: string, max = 5) {
+  const now = Date.now();
+  const arr = (hits.get(ip) || []).filter(t => now - t < 3600_000);
+  arr.push(now);
+  hits.set(ip, arr);
+  return arr.length > max;
+}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+
 const AUDIENCE_ID = process.env.GENETIC_TESTING_AUDIENCE_ID || "";
 
 export async function POST(req: NextRequest) {
   const { email, firstName } = await req.json();
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  if (rateLimited(ip)) return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+  if (!email || !EMAIL_RE.test(String(email))) return NextResponse.json({ error: "Invalid email" }, { status: 400 });
   if (!email) return NextResponse.json({ error: "Email required" }, { status: 400 });
   if (!process.env.RESEND_API_KEY || !AUDIENCE_ID) return NextResponse.json({ success: true });
 

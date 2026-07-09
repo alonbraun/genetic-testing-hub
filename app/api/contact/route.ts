@@ -1,7 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const hits = new Map<string, number[]>();
+function rateLimited(ip: string, max = 5) {
+  const now = Date.now();
+  const arr = (hits.get(ip) || []).filter(t => now - t < 3600_000);
+  arr.push(now);
+  hits.set(ip, arr);
+  return arr.length > max;
+}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
 export async function POST(req: NextRequest) {
-  const { company, email, message } = await req.json();
+  const body = await req.json().catch(() => ({}));
+  const { company, email, message } = body;
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+
+  // Bot defenses: honeypot field, rate limit, validation
+  if (body.website) return NextResponse.json({ success: true }); // honeypot — pretend success
+  if (rateLimited(ip)) return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+  if (!company || !email || !EMAIL_RE.test(String(email)) || String(company).length > 120 || String(message || "").length > 2000) {
+    return NextResponse.json({ error: "Invalid submission" }, { status: 400 });
+  }
 
   if (process.env.RESEND_API_KEY) {
     await fetch("https://api.resend.com/emails", {
