@@ -83,3 +83,6 @@ jobs:
           git add content/companies/
           git diff --staged --quiet || git commit -m "feat: add new company listings $(date +%Y-%m-%d)"
           git push
+
+      # NOTE: old Netlify hook rebuilt the wrong repo (gene-spotlight) — deploys
+      # now happen via the command-center daily deploy cron.

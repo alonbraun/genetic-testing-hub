@@ -32,5 +32,6 @@ jobs:
           git diff --staged --quiet || git commit -m "feat: publish news article $(date +%Y-%m-%d)"
           git push
 
-      - name: Trigger Netlify deploy
-        run: curl -s -X POST https://api.netlify.com/build_hooks/6a3df39b5b6b9c722d8afb29
+      # NOTE: the old Netlify build hook rebuilt the WRONG repo (gene-spotlight
+      # prototype) and clobbered the live Next.js site. Deploys now happen via
+      # the command-center daily deploy cron (git pull + netlify CLI --site).
