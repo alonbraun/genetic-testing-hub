@@ -21,6 +21,13 @@ export async function POST(req: NextRequest) {
   if (!company || !email || !EMAIL_RE.test(String(email)) || String(company).length > 120 || String(message || "").length > 2000) {
     return NextResponse.json({ error: "Invalid submission" }, { status: 400 });
   }
+  // Gibberish detector: random-string company/message (e.g. "OPgipbYBtuKcdIVMbdOzqeGA")
+  const RANDOM_RE = /^(?=.*[a-z])(?=.*[A-Z])[A-Za-z0-9]{12,}$/;
+  const gibberish = [company, message].some(v => {
+    const s = String(v || "").trim();
+    return RANDOM_RE.test(s) || (s.length > 12 && !s.includes(" ") && /[A-Z]/.test(s.slice(1)));
+  });
+  if (gibberish) return NextResponse.json({ ok: true }); // swallow silently like honeypot
 
   if (process.env.RESEND_API_KEY) {
     await fetch("https://api.resend.com/emails", {
