@@ -1,12 +1,12 @@
 ---
-name: Veritas Genetics
+name: "Veritas Genetics"
 slug: veritas-genetics
-category: Clinical Diagnostics
-description: Veritas Genetics provides whole genome and exome sequencing for clinical diagnostics, prenatal testing, and hereditary cancer risk assessment.
-website: https://veritasgenetics.com
-funding: $82,809,999
-location: Madrid, Community of Madrid, Spain
+category: Genetic Testing
+description: "Veritas Genetics is a genetic testing company that provides comprehensive genomic sequencing and analysis services to individuals seeking detailed insights into their genetic health, ancestry, and disease risks. The company delivers clinical-grade genetic testing with physician-reviewed results and personalized health recommendations based on whole-genome or exome sequencing data."
+website: 
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-11
 ---
