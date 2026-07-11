@@ -1,12 +1,12 @@
 ---
-name: Fulgent Genetics
+name: "Fulgent Genetics"
 slug: fulgent-genetics
-category: Clinical Diagnostics
-description: CLIA-licensed laboratory offering comprehensive genomic testing including cancer panels, carrier screening, and COVID testing using next-generation sequencing.
-website: https://fulgentgenetics.com
-funding: Unknown
-location: El Monte, California, United States
+category: Genetic Testing
+description: "Fulgent Genetics is a clinical laboratory and genetic testing company that provides DNA testing services for inherited conditions, carrier screening, and pharmacogenomics. The company offers comprehensive genetic analysis to healthcare providers and patients seeking diagnostic and preventive health information."
+website: 
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-11
 ---
