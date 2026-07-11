@@ -1,12 +1,12 @@
 ---
-name: Igentify
+name: "Igentify"
 slug: igentify
-category: Genetic Counseling
-description: Igentify provides scalable genetic counseling and genomic testing services using NGS and microarray analysis for clinical diagnostics.
-website: https://igentify.com
-funding: $10,500,000
-location: New York, New York, United States
+category: Genetic Testing
+description: "Igentify is a genetic testing company specializing in personalized DNA analysis and identification services for healthcare providers and consumers. The company leverages advanced genomic sequencing technology to deliver actionable genetic insights for disease risk assessment, ancestry analysis, and precision medicine applications."
+website: 
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-11
 ---
