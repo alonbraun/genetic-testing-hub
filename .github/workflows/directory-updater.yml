@@ -42,13 +42,13 @@ jobs:
 
           FILE: slug-here.md
           ---
-          name: Company Name
+          name: "Company Name"
           slug: slug-here
           category: Consumer DNA Testing | Clinical Diagnostics | Oncology Genomics | Pharmacogenomics | Prenatal Testing | Ancestry & Genealogy | Research Tools | Genetic Counseling
-          description: One sentence description of what the company does.
+          description: "One sentence description of what the company does."
           website: https://example.com
-          funding: Funding info or "Bootstrapped" or "Unknown"
-          location: City, State/Country
+          funding: "Funding info — ALWAYS double-quote this value; unquoted colons (e.g. NASDAQ: XYZ) break the site build"
+          location: "City, State/Country"
           tier: free
           featured: false
           date: {date.today().isoformat()}
