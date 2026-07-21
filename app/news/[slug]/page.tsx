@@ -11,6 +11,17 @@ export async function generateStaticParams() {
   return [];
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = getFileBySlug("news", slug) as any;
+  if (!article) return {};
+  return {
+    title: `${article.title} — GeneticTesting.com`,
+    description: article.excerpt || article.title,
+    alternates: { canonical: `/news/${slug}` },
+  };
+}
+
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = getFileBySlug("news", slug) as any;

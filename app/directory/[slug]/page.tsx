@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${company.name} — GeneticTesting.com`,
     description: company.description,
+    alternates: { canonical: `/directory/${slug}` },
   };
 }
 

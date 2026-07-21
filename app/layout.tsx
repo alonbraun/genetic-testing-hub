@@ -7,8 +7,10 @@ import "./globals.css";
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://genetictesting.com"),
   title: "GeneticTesting.com — The Genetic Testing Industry Hub",
   description: "The go-to resource for genetic testing companies, genomics news, and precision medicine insights.",
+  alternates: { canonical: "/" },
   verification: { google: "QddZ1jpeWkIEXeuf5ZR-LSZiw9vvXzmhFTyc7aXUdeg" },
   openGraph: {
     title: "GeneticTesting.com — The Genetic Testing Industry Hub",
