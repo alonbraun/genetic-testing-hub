@@ -1126,5 +1126,805 @@
     "type": "noreply",
     "step": 1,
     "sent_at": "2026-07-07T08:07:01.653Z"
+  },
+  {
+    "email": "luciana@genoox.com",
+    "company": "Franklin by QIAGEN",
+    "subject": "Re: We've listed Franklin by QIAGEN on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:10.069Z"
+  },
+  {
+    "email": "khill@foundationmedicine.com",
+    "company": "Foundation Medicine",
+    "subject": "Re: We've listed Foundation Medicine on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:12.309Z"
+  },
+  {
+    "email": "daviddu@completegenomics.com",
+    "company": "Complete Genomics",
+    "subject": "Re: Your Complete Genomics profile is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:14.565Z"
+  },
+  {
+    "email": "velko@sanogenetics.com",
+    "company": "Sano Genetics",
+    "subject": "Re: We've listed Sano Genetics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:16.828Z"
+  },
+  {
+    "email": "cdavis@billiontoone.com",
+    "company": "BillionToOne",
+    "subject": "Re: BillionToOne is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:19.342Z"
+  },
+  {
+    "email": "alexis.nathaniel@prenetics.com",
+    "company": "Prenetics",
+    "subject": "Re: We've listed Prenetics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:22.118Z"
+  },
+  {
+    "email": "yudo@othram.com",
+    "company": "Othram Inc.",
+    "subject": "Re: Othram Inc. is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:24.329Z"
+  },
+  {
+    "email": "ipalka@genedx.com",
+    "company": "GeneDx",
+    "subject": "Re: We've listed GeneDx on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:26.725Z"
+  },
+  {
+    "email": "ajit.raju@medgenome.com",
+    "company": "MEDGENOME",
+    "subject": "Re: MEDGENOME is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:29.186Z"
+  },
+  {
+    "email": "rwatanabe@alphabiolabs.com",
+    "company": "AlphaBiolabs",
+    "subject": "Re: We've listed AlphaBiolabs on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:31.757Z"
+  },
+  {
+    "email": "rbloom@castlebiosciences.com",
+    "company": "Castle Biosciences, Inc.",
+    "subject": "Re: Castle Biosciences is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:34.355Z"
+  },
+  {
+    "email": "john.chirico@genedx.com",
+    "company": "GeneDx",
+    "subject": "Re: We've listed GeneDx on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:37.254Z"
+  },
+  {
+    "email": "ben.jackson@ogt.com",
+    "company": "OGT",
+    "subject": "Re: We've listed OGT on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:39.332Z"
+  },
+  {
+    "email": "luke@eugenelabs.com",
+    "company": "Eugene",
+    "subject": "Re: Eugene is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:42.621Z"
+  },
+  {
+    "email": "diksha.raghaw@corediagnostics.in",
+    "company": "CORE Diagnostics",
+    "subject": "Re: We've listed CORE Diagnostics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:44.789Z"
+  },
+  {
+    "email": "frederikh@23andme.com",
+    "company": "23andMe",
+    "subject": "Re: We've listed 23andMe on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:47.124Z"
+  },
+  {
+    "email": "sprenenski@foundationmedicine.com",
+    "company": "Foundation Medicine",
+    "subject": "Re: We've listed Foundation Medicine on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:49.080Z"
+  },
+  {
+    "email": "egala@baylorgenetics.com",
+    "company": "Baylor Genetics",
+    "subject": "Re: We've listed Baylor Genetics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:51.325Z"
+  },
+  {
+    "email": "klinden@genedx.com",
+    "company": "GeneDx",
+    "subject": "Re: We've listed GeneDx on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:54.452Z"
+  },
+  {
+    "email": "abhijeet.goon@lilacinsights.com",
+    "company": "Lilac Insights",
+    "subject": "Re: Lilac Insights is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:56.833Z"
+  },
+  {
+    "email": "bsvarczkopf@biocartis.com",
+    "company": "Biocartis",
+    "subject": "Re: We've listed Biocartis on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:16:58.879Z"
+  },
+  {
+    "email": "courtney.eberhard@genebygene.com",
+    "company": "Gene by Gene",
+    "subject": "Re: We've listed Gene by Gene on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:01.061Z"
+  },
+  {
+    "email": "ana.esteban@centogene.com",
+    "company": "CENTOGENE",
+    "subject": "Re: We've listed CENTOGENE on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:03.214Z"
+  },
+  {
+    "email": "zubair.a@mapmygenome.in",
+    "company": "MapmyGenome - Know Yourself",
+    "subject": "Re: We've listed MapmyGenome on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:05.844Z"
+  },
+  {
+    "email": "sophie.mclachlan@genomicsengland.co.uk",
+    "company": "Genomics England",
+    "subject": "Re: We've listed Genomics England on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:07.998Z"
+  },
+  {
+    "email": "sergio.cafalli@neogenomica.com.br",
+    "company": "Neogenomica",
+    "subject": "Re: We've listed Neogenomica on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:10.373Z"
+  },
+  {
+    "email": "natasha.bunanta@nalagenetics.com",
+    "company": "NalaGenetics",
+    "subject": "Re: NalaGenetics is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:12.777Z"
+  },
+  {
+    "email": "kumariankita@genesolutions.com",
+    "company": "Gene Solutions",
+    "subject": "Re: Gene Solutions is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:15.258Z"
+  },
+  {
+    "email": "carleigh.peterson@variantyx.com",
+    "company": "Variantyx",
+    "subject": "Re: Variantyx is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:17.604Z"
+  },
+  {
+    "email": "patterson.yeoh@yourgenehealth.com",
+    "company": "Yourgene Health",
+    "subject": "Re: We've listed Yourgene Health on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:20.008Z"
+  },
+  {
+    "email": "carl.alexander@genomicsengland.co.uk",
+    "company": "Genomics England",
+    "subject": "Re: We've listed Genomics England on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:22.189Z"
+  },
+  {
+    "email": "alistair.johnson@congenica.com",
+    "company": "Congenica",
+    "subject": "Re: We've listed Congenica on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:28.210Z"
+  },
+  {
+    "email": "michael.addley@genomicsengland.co.uk",
+    "company": "Genomics England",
+    "subject": "Re: We've listed Genomics England on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:30.262Z"
+  },
+  {
+    "email": "aoshaughnessy@bionano.com",
+    "company": "Bionano",
+    "subject": "Re: We've listed Bionano on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:32.755Z"
+  },
+  {
+    "email": "francisco.rodriguez@vitrolifegroup.com",
+    "company": "Vitrolife, Part of Vitrolife Group",
+    "subject": "Re: Your Vitrolife listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:35.107Z"
+  },
+  {
+    "email": "ana.c@orchid-fertility.com",
+    "company": "Orchid IVF and Fertility Services",
+    "subject": "Re: We've listed Orchid IVF on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:37.396Z"
+  },
+  {
+    "email": "jmirosevich@sophiagenetics.com",
+    "company": "SOPHiA GENETICS",
+    "subject": "Re: We've listed SOPHiA GENETICS on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:39.905Z"
+  },
+  {
+    "email": "matteo.panfili@diatechpharmacogenetics.com",
+    "company": "Diatech Pharmacogenetics",
+    "subject": "Re: We've listed Diatech Pharmacogenetics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:43.025Z"
+  },
+  {
+    "email": "ayat.mamdouh@siparadigm.com",
+    "company": "sïParadigm Diagnostic Informatics",
+    "subject": "Re: We've listed sïParadigm on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:45.330Z"
+  },
+  {
+    "email": "gabrielle.stauber@preventiongenetics.com",
+    "company": "PreventionGenetics",
+    "subject": "Re: PreventionGenetics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:47.996Z"
+  },
+  {
+    "email": "bjohnson@exactsciences.com",
+    "company": "Exact Sciences",
+    "subject": "Re: Your Exact Sciences listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:50.332Z"
+  },
+  {
+    "email": "sarah.oshasky@preventiongenetics.com",
+    "company": "PreventionGenetics",
+    "subject": "Re: PreventionGenetics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:53.375Z"
+  },
+  {
+    "email": "valerie.worzella@preventiongenetics.com",
+    "company": "PreventionGenetics",
+    "subject": "Re: Your PreventionGenetics listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:55.791Z"
+  },
+  {
+    "email": "tina.horvath@geneidlab.com",
+    "company": "GeneID Lab, Advanced Molecular Diagnostics",
+    "subject": "Re: Your GeneID Lab listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:17:58.120Z"
+  },
+  {
+    "email": "pkumar@dnacenter.com",
+    "company": "DNA Diagnostics Center | Eurofins",
+    "subject": "Re: Your DNA Diagnostics Center listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:00.488Z"
+  },
+  {
+    "email": "larry@premierdrugdnatesting.com",
+    "company": "Premier Drug & DNA Testing",
+    "subject": "Re: Your Premier Drug & DNA Testing listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:02.914Z"
+  },
+  {
+    "email": "latrisha.m@peaceofmindpaternity.com",
+    "company": "Peace of Mind Paternity & DNA Testing",
+    "subject": "Re: Your Peace of Mind listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:05.133Z"
+  },
+  {
+    "email": "simon.fleming@precisionformedicine.com",
+    "company": "Precision For Medicine",
+    "subject": "Re: Precision For Medicine on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:08.038Z"
+  },
+  {
+    "email": "david@mendelics.com",
+    "company": "Mendelics",
+    "subject": "Re: Your Mendelics profile is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:10.308Z"
+  },
+  {
+    "email": "tuan@genetica.asia",
+    "company": "GENETICA® US",
+    "subject": "Re: GENETICA® US is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:13.260Z"
+  },
+  {
+    "email": "malcolm@mydnahealth.co.uk",
+    "company": "myDNAhealth",
+    "subject": "Re: myDNAhealth is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:15.601Z"
+  },
+  {
+    "email": "lekhangda.ab@geneticcounsellingindia.com",
+    "company": "Genetic Counselling India LLP (GCIL)",
+    "subject": "Re: Your GCIL listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:17.700Z"
+  },
+  {
+    "email": "marko.bitenc@geneplanet.com",
+    "company": "GenePlanet",
+    "subject": "Re: GenePlanet's profile on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:21.827Z"
+  },
+  {
+    "email": "shawn@pgxally.com",
+    "company": "PGxAlly",
+    "subject": "Re: PGxAlly on GeneticTesting.com — advertising opportunities",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:24.181Z"
+  },
+  {
+    "email": "noor@orchidhealth.com",
+    "company": "Orchid",
+    "subject": "Re: Your Orchid listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:26.733Z"
+  },
+  {
+    "email": "michelle@previvoredge.com",
+    "company": "Previvor Edge",
+    "subject": "Re: Previvor Edge is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:29.109Z"
+  },
+  {
+    "email": "jorge.oliver@adntro.com",
+    "company": "ADNTRO GENETICS",
+    "subject": "Re: ADNTRO Genetics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:31.807Z"
+  },
+  {
+    "email": "giordano@allelica.com",
+    "company": "Allelica, Inc",
+    "subject": "Re: Allelica's listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:34.073Z"
+  },
+  {
+    "email": "johnsee@personalgx.com",
+    "company": "Personal Genomics",
+    "subject": "Re: Personal Genomics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:37.154Z"
+  },
+  {
+    "email": "michael.greene@gtcasolutions.com",
+    "company": "GenoTyping Center of America",
+    "subject": "Re: GenoTyping Center of America is now on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:39.495Z"
+  },
+  {
+    "email": "mileyko@oncoatlas.ru",
+    "company": "OncoAtlas",
+    "subject": "Re: OncoAtlas on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:41.579Z"
+  },
+  {
+    "email": "kim@snipnutrition.com",
+    "company": "SNiP Nutrigenomics",
+    "subject": "Re: SNiP Nutrigenomics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:44.115Z"
+  },
+  {
+    "email": "raj.jampa@myriad.com",
+    "company": "Myriad Genetics",
+    "subject": "Re: Myriad Genetics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:46.359Z"
+  },
+  {
+    "email": "adamabdool@dxomeclia.com",
+    "company": "Dxome CLIA Laboratory",
+    "subject": "Re: Your Dxome listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:48.646Z"
+  },
+  {
+    "email": "gustavo@fetaladn.com",
+    "company": "fetalADN",
+    "subject": "Re: fetalADN on GeneticTesting.com - advertising opportunities",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:51.012Z"
+  },
+  {
+    "email": "alper@cognidna.com",
+    "company": "cogniDNA",
+    "subject": "Re: Your cogniDNA listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:53.216Z"
+  },
+  {
+    "email": "nate.wilbourne@precisiongenetics.com",
+    "company": "Precision Genetics",
+    "subject": "Re: Precision Genetics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:18:58.654Z"
+  },
+  {
+    "email": "afischer@genomind.com",
+    "company": "Genomind",
+    "subject": "Re: Your Genomind listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:00.827Z"
+  },
+  {
+    "email": "danstey@genomenon.com",
+    "company": "Genomenon, Inc",
+    "subject": "Re: Genomenon's listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:02.923Z"
+  },
+  {
+    "email": "grant.bitter@genomicexpress.com",
+    "company": "Genomic Express, Inc.",
+    "subject": "Re: Genomic Express on GeneticTesting.com — advertising opportunities",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:05.953Z"
+  },
+  {
+    "email": "neerajgupta@genes2me.com",
+    "company": "G2M | Next Generation IVD solutions for Genomics",
+    "subject": "Re: G2M's listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:08.100Z"
+  },
+  {
+    "email": "gilad.almogy@ultimagen.com",
+    "company": "Ultima Genomics",
+    "subject": "Re: Ultima Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:10.727Z"
+  },
+  {
+    "email": "uira@lucid-genomics.com",
+    "company": "Lucid Genomics",
+    "subject": "Re: Lucid Genomics + GeneticTesting.com partnership opportunity",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:13.213Z"
+  },
+  {
+    "email": "joel.sevinsky@theiagen.com",
+    "company": "Theiagen Genomics",
+    "subject": "Re: Theiagen Genomics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:15.470Z"
+  },
+  {
+    "email": "lawrence@swangenomics.com",
+    "company": "SWAN Genomics",
+    "subject": "Re: SWAN Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:17.873Z"
+  },
+  {
+    "email": "serge@10xgenomics.com",
+    "company": "10x Genomics",
+    "subject": "Re: 10x Genomics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:20.156Z"
+  },
+  {
+    "email": "jrafferty@ontariogenomics.ca",
+    "company": "Ontario Genomics",
+    "subject": "Re: Ontario Genomics is now live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:22.684Z"
+  },
+  {
+    "email": "ivan@phasegenomics.com",
+    "company": "Phase Genomics",
+    "subject": "Re: Your Phase Genomics listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:25.376Z"
+  },
+  {
+    "email": "huy.nguyen@acuityspatialgenomics.com",
+    "company": "Bruker Spatial Genomics, Inc.",
+    "subject": "Re: Bruker Spatial Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:27.940Z"
+  },
+  {
+    "email": "em@arnagenomics.com",
+    "company": "ARNA Genomics US Inc.",
+    "subject": "Re: ARNA Genomics on GeneticTesting.com + advertising opportunities",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:30.563Z"
+  },
+  {
+    "email": "g.michuki@tagccglobal.org",
+    "company": "The Africa Genomics Centre and Consultancy (TAGCC)",
+    "subject": "Re: TAGCC is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:36.669Z"
+  },
+  {
+    "email": "frank.liu@bgi.com",
+    "company": "BGI Genomics",
+    "subject": "Re: BGI Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:39.156Z"
+  },
+  {
+    "email": "mike@jumpcodegenomics.com",
+    "company": "Jumpcode Genomics",
+    "subject": "Re: Jumpcode Genomics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:42.419Z"
+  },
+  {
+    "email": "squinn@curiogenomics.com",
+    "company": "CURIO Genomics",
+    "subject": "Re: CURIO Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:44.970Z"
+  },
+  {
+    "email": "psargeant@circulargenomics.com",
+    "company": "Circular Genomics",
+    "subject": "Re: Circular Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:47.313Z"
+  },
+  {
+    "email": "tom.willis@arimagenomics.com",
+    "company": "Arima Genomics",
+    "subject": "Re: Your Arima Genomics listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:49.462Z"
+  },
+  {
+    "email": "bgulko@progenicgenomics.com",
+    "company": "Progenic Genomics",
+    "subject": "Re: Progenic Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:51.727Z"
+  },
+  {
+    "email": "tao@paragongenomics.com",
+    "company": "Paragon Genomics",
+    "subject": "Re: Paragon Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:53.904Z"
+  },
+  {
+    "email": "leann@gapininstitute.com",
+    "company": "Gapin Institute for Precision Medicine",
+    "subject": "Re: Gapin Institute's listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:56.052Z"
+  },
+  {
+    "email": "jkikkert@razorgenomics.com",
+    "company": "Razor Genomics",
+    "subject": "Re: Razor Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:19:58.658Z"
+  },
+  {
+    "email": "tim@rosalind.bio",
+    "company": "ROSALIND",
+    "subject": "Re: ROSALIND's listing is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:00.929Z"
+  },
+  {
+    "email": "pedro.castro@exongenomics.com",
+    "company": "Exon Genomics",
+    "subject": "Re: Exon Genomics on GeneticTesting.com + advertising opportunities",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:03.974Z"
+  },
+  {
+    "email": "stephane@variantbio.com",
+    "company": "Variant Bio",
+    "subject": "Re: Variant Bio on GeneticTesting.com — let's talk visibility",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:06.446Z"
+  },
+  {
+    "email": "dsks@eurofins.com",
+    "company": "Eurofins Genomics",
+    "subject": "Re: Eurofins Genomics on GeneticTesting.com — partnership opportunity",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:08.808Z"
+  },
+  {
+    "email": "am73941@saphetor.com",
+    "company": "Saphetor",
+    "subject": "Re: Your Saphetor profile is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:11.399Z"
+  },
+  {
+    "email": "gstazyk@fusiongenomics.com",
+    "company": "Fusion Genomics Corporation",
+    "subject": "Re: Fusion Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:13.996Z"
+  },
+  {
+    "email": "rliu@singleragenomics.com",
+    "company": "Singlera Genomics Incorporated",
+    "subject": "Re: Singlera Genomics on GeneticTesting.com — partnership opportunity",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:16.562Z"
+  },
+  {
+    "email": "bharat@heliogenomics.com",
+    "company": "Helio Genomics",
+    "subject": "Re: Helio Genomics on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:19.101Z"
+  },
+  {
+    "email": "jkennedy@cantatabio.com",
+    "company": "Dovetail Genomics",
+    "subject": "Re: Dovetail Genomics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:21.288Z"
+  },
+  {
+    "email": "sherie@genieus.co",
+    "company": "GenieUs Genomics",
+    "subject": "Re: GenieUs Genomics is live on GeneticTesting.com",
+    "type": "noreply",
+    "step": 2,
+    "sent_at": "2026-07-22T10:20:23.848Z"
   }
 ]
