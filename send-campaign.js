@@ -9,7 +9,7 @@ const path = require("path");
 const readline = require("readline");
 const https = require("https");
 
-// ─── Config (loaded from environment) ────────────────────────────────────────
+// ─── Config ───────────────────────────────────────────────────────────────────
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const RESEND_KEY    = process.env.RESEND_API_KEY;
 const GITHUB_TOKEN  = process.env.GITHUB_TOKEN;
@@ -21,25 +21,11 @@ const DELAY_MS      = 3000;
 const SENT_LOG_PATH     = path.join(__dirname, "content/campaigns/sent-leads.json");
 const REJECTED_LOG_PATH = path.join(__dirname, "content/campaigns/rejected-leads.json");
 
-const GENOMICS_KEYWORDS = [
-  "genetic", "genomic", "dna", "genome", "sequencing", "ngs", "snp", "variant",
-  "hereditary", "heredity", "chromosome", "gene", "exome", "proteom", "biomarker",
-  "precision medicine", "pharmacogenom", "liquid biopsy", "oncogen", "mutation",
-  "crispr", "gene therapy", "gene edit", "ancestry", "genealog", "diagnostic",
-  "prenatal", "nipt", "carrier test", "pathogen", "clinical genetic", "molecular",
-  "bioinformat", "genotyp", "phenotyp", "rare disease", "rare genetic",
-];
-
-function isGenomics(lead) {
-  const domain = (lead.website || lead.email.split("@")[1] || "").toLowerCase();
-  const text = `${lead.company} ${domain}`.toLowerCase();
-  return GENOMICS_KEYWORDS.some(k => text.includes(k));
-}
-
-const CSV_PATH = process.argv[2] || path.join(process.env.HOME, "Downloads/apollo-contacts-export-4.csv");
 const QA_MODE  = process.argv.includes("--qa");
+const csvArg   = process.argv.slice(2).find(a => !a.startsWith("--"));
+const CSV_PATH = csvArg || path.join(process.env.HOME, "Downloads/apollo-contacts-export-4.csv");
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+// ─── CSV parser ───────────────────────────────────────────────────────────────
 function parseCsvLine(line) {
   const cells = [];
   let cur = "", inQuote = false;
@@ -78,22 +64,19 @@ function loadCsv(filePath) {
   }).filter(l => l.email && l.company);
 }
 
-function loadSentEmails() {
-  try {
-    const data = JSON.parse(fs.readFileSync(SENT_LOG_PATH, "utf8"));
-    return new Set(data.map(e => e.email.toLowerCase()));
-  } catch { return new Set(); }
-}
-
+// ─── Logs ─────────────────────────────────────────────────────────────────────
 function normalizeCompany(name) {
   return name.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
+function loadSentEmails() {
+  try { return new Set(JSON.parse(fs.readFileSync(SENT_LOG_PATH, "utf8")).map(e => e.email.toLowerCase())); }
+  catch { return new Set(); }
+}
+
 function loadRejectedEmails() {
-  try {
-    const data = JSON.parse(fs.readFileSync(REJECTED_LOG_PATH, "utf8"));
-    return new Set(data.map(e => e.email.toLowerCase()));
-  } catch { return new Set(); }
+  try { return new Set(JSON.parse(fs.readFileSync(REJECTED_LOG_PATH, "utf8")).map(e => e.email.toLowerCase())); }
+  catch { return new Set(); }
 }
 
 function logRejected(lead) {
@@ -111,7 +94,7 @@ function logSent(lead, subject) {
     email: lead.email,
     name: lead.name,
     company: lead.company,
-    campaign: "GeneticTesting.com — Sponsored Content Outreach 2026",
+    campaign: "GeneticTesting.com — You've Been Listed Outreach 2026",
     client: "GeneticTesting.com",
     subject,
     sent_at: new Date().toISOString(),
@@ -120,6 +103,7 @@ function logSent(lead, subject) {
   fs.writeFileSync(SENT_LOG_PATH, JSON.stringify(log, null, 2));
 }
 
+// ─── HTTP ─────────────────────────────────────────────────────────────────────
 function fetchJson(url, options, body) {
   return new Promise((resolve, reject) => {
     const u = new URL(url);
@@ -131,10 +115,7 @@ function fetchJson(url, options, body) {
     }, res => {
       let data = "";
       res.on("data", chunk => (data += chunk));
-      res.on("end", () => {
-        try { resolve(JSON.parse(data)); }
-        catch { resolve({ raw: data }); }
-      });
+      res.on("end", () => { try { resolve(JSON.parse(data)); } catch { resolve({ raw: data }); } });
     });
     req.on("error", reject);
     if (body) req.write(JSON.stringify(body));
@@ -142,14 +123,15 @@ function fetchJson(url, options, body) {
   });
 }
 
+// ─── AI: Score relevance ──────────────────────────────────────────────────────
 async function scoreRelevance(lead) {
   const prompt = `You are helping decide if a company should be listed on GeneticTesting.com — a B2B industry directory for the genetic testing and genomics sector.
 
-GeneticTesting.com covers: consumer DNA testing, clinical genetic diagnostics, oncology genomics (liquid biopsy, tumor profiling), pharmacogenomics, prenatal testing (NIPT, carrier screening), ancestry & genealogy testing, genomic research tools, bioinformatics platforms, genetic counseling platforms, rare disease genetic testing, precision medicine.
+GeneticTesting.com covers: consumer DNA testing, clinical genetic diagnostics, oncology genomics (liquid biopsy, tumor profiling), pharmacogenomics, prenatal testing (NIPT, carrier screening), ancestry & genealogy testing, genomic research tools, bioinformatics platforms, genetic counseling platforms, rare disease genetic testing, precision medicine, newborn screening, hereditary cancer testing.
 
-APPROVED (good fit): 23andMe, Illumina, Foundation Medicine, Guardant Health, Invitae, Color Genomics, GeneDx, Myriad Genetics, Natera, Tempus, Grail, SOPHiA GENETICS, Sema4, Ambry Genetics.
+APPROVED (good fit): 23andMe, Illumina, Foundation Medicine, Guardant Health, Invitae, Color Genomics, GeneDX, Myriad Genetics, Natera, Tempus, GRAIL, SOPHiA GENETICS, Sema4, Ambry Genetics, labs offering NGS panels, genetic software platforms, genomic data companies.
 
-REJECTED (bad fit): general hospitals, universities, general biotech with no genomics focus, marketing agencies, edtech, general pharma with no genomics division, general CROs.
+REJECTED (bad fit): general hospitals, universities, general biotech with no genomics focus, marketing agencies, edtech, general pharma with no genetics division, general CROs, unrelated health tech.
 
 Company to evaluate:
 - Name: ${lead.company}
@@ -158,49 +140,31 @@ Company to evaluate:
 - Keywords: ${lead.relevance ? lead.relevance.split(",").slice(0, 8).join(", ") : ""}
 
 Reply with JSON only: {"score": 1-10, "reason": "one sentence", "verdict": "YES" | "MAYBE" | "NO"}
-- YES (7-10): clearly genetic testing or genomics — device, software, diagnostic, or platform for genetic/genomic analysis
+- YES (7-10): clearly genetic testing or genomics — diagnostic, platform, device, or service for genetic/genomic analysis
 - MAYBE (4-6): adjacent — could be relevant but not core genomics
-- NO (1-3): hospital, university, general health, edtech, unrelated industry`;
+- NO (1-3): hospital, university, general health, unrelated industry`;
 
   try {
     const data = await fetchJson(
       "https://api.anthropic.com/v1/messages",
-      {
-        method: "POST",
-        headers: {
-          "x-api-key": ANTHROPIC_KEY,
-          "anthropic-version": "2023-06-01",
-          "content-type": "application/json",
-        },
-      },
-      {
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: 100,
-        messages: [{ role: "user", content: prompt }],
-      }
+      { method: "POST", headers: { "x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" } },
+      { model: "claude-haiku-4-5-20251001", max_tokens: 100, messages: [{ role: "user", content: prompt }] }
     );
-    let text = data.content?.[0]?.text?.trim() || "{}";
-    text = text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+    let text = (data.content?.[0]?.text || "{}").trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
     return JSON.parse(text);
   } catch {
     return { score: 5, reason: "Could not score", verdict: "MAYBE" };
   }
 }
 
+// ─── AI: Publish company to GitHub ────────────────────────────────────────────
 async function publishCompany(lead) {
   const slug = lead.company.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const website = lead.website || `https://${lead.email.split("@")[1]}`;
 
   const data = await fetchJson(
     "https://api.anthropic.com/v1/messages",
-    {
-      method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_KEY,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-      },
-    },
+    { method: "POST", headers: { "x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" } },
     {
       model: "claude-haiku-4-5-20251001",
       max_tokens: 200,
@@ -218,13 +182,13 @@ Return only the 2-sentence description, no other text.`,
   );
 
   const description = data.content?.[0]?.text?.trim() || `${lead.company} is a genetic testing company.`;
-
   const safeName = lead.company.includes(":") ? `"${lead.company}"` : lead.company;
+
   const content = `---
 name: ${safeName}
 slug: ${slug}
 category: Clinical Diagnostics
-description: ${description}
+description: "${description.replace(/"/g, "'")}"
 website: ${website}
 funding: Private
 location: ""
@@ -253,11 +217,7 @@ date: ${new Date().toISOString().split("T")[0]}
     `https://api.github.com/repos/${REPO}/contents/${filePath}`,
     {
       method: "PUT",
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-        "User-Agent": "genetictesting/1.0",
-        "Content-Type": "application/json",
-      },
+      headers: { Authorization: `token ${GITHUB_TOKEN}`, "User-Agent": "genetictesting/1.0", "Content-Type": "application/json" },
     },
     body
   );
@@ -265,6 +225,7 @@ date: ${new Date().toISOString().split("T")[0]}
   return { slug, url: `https://genetictesting.com/directory/${slug}`, description };
 }
 
+// ─── AI: Load voice guidelines ────────────────────────────────────────────────
 async function loadVoiceGuidelines() {
   if (!GITHUB_TOKEN) return "";
   try {
@@ -276,19 +237,17 @@ async function loadVoiceGuidelines() {
   } catch { return ""; }
 }
 
+// ─── AI: Generate email ───────────────────────────────────────────────────────
 async function generateEmail(lead, voiceGuidelines, listingUrl) {
-  const voiceContext = voiceGuidelines
-    ? `\n\nVoice & style guidelines (always follow these):\n${voiceGuidelines}`
-    : "";
-
+  const voiceContext = voiceGuidelines ? `\n\nVoice & style guidelines:\n${voiceGuidelines}` : "";
   const listingContext = listingUrl
-    ? `\nWe have just added ${lead.company} to the GeneticTesting.com directory: ${listingUrl} — mention this naturally early in the email as the reason for reaching out. Let them know they now have a free listing and invite them to check it out.`
+    ? `\nWe just added ${lead.company} to the GeneticTesting.com directory: ${listingUrl} — mention this early as the reason for reaching out.`
     : "";
 
   const prompt = `You write outreach emails for GeneticTesting.com, a genetic testing and genomics industry news and directory portal.
 
-Campaign: Get marketing or communications leads at genetic testing companies to advertise on GeneticTesting.com
-Sequence step: 1 — First touch — introduce GeneticTesting.com and the advertising opportunity. Be curious, not salesy.
+Campaign: Notify genomics companies they've been listed on GeneticTesting.com, and introduce the advertising opportunity.
+Sequence step: 1 — First touch — share the free listing, be helpful and genuine, not salesy.
 ${listingContext}${voiceContext}
 
 Lead:
@@ -297,13 +256,13 @@ Lead:
 - Company: ${lead.company}
 - Why relevant: ${lead.relevance ? lead.relevance.split(",").slice(0, 5).join(", ") : "Genetic testing industry professional"}
 
-Write a personalized cold outreach email. Rules:
-- Subject line: specific and intriguing, not generic
+Write a personalized outreach email. Rules:
+- Subject line: specific and warm, not generic
 - Opening: reference the free directory listing we just created for them — that's the hook
 - Body: 3-4 short paragraphs max
 - Never mention specific audience size numbers
 - Describe the audience qualitatively: "researchers, clinicians, founders, and investors in genetic testing and genomics"
-- After mentioning the free listing, softly introduce the paid advertising opportunity at genetictesting.com/advertise
+- Softly introduce the paid advertising opportunity at genetictesting.com/advertise
 - Sign off as: "Alon Braun\\nGeneticTesting.com"
 - Tone: founder-to-founder, direct, warm, not corporate or templated
 
@@ -312,40 +271,23 @@ Return only valid JSON, no other text.`;
 
   const data = await fetchJson(
     "https://api.anthropic.com/v1/messages",
-    {
-      method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_KEY,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-      },
-    },
-    {
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 700,
-      messages: [{ role: "user", content: prompt }],
-    }
+    { method: "POST", headers: { "x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" } },
+    { model: "claude-haiku-4-5-20251001", max_tokens: 700, messages: [{ role: "user", content: prompt }] }
   );
 
   if (data.error) throw new Error(data.error.message || JSON.stringify(data.error));
-  let text = data.content?.[0]?.text?.trim() || "{}";
-  text = text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+  let text = (data.content?.[0]?.text || "{}").trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
   return JSON.parse(text);
 }
 
+// ─── Send email ───────────────────────────────────────────────────────────────
 async function sendEmail(lead, subject, body, qaMode) {
   const toEmail = qaMode ? QA_EMAIL : lead.email;
   const toName  = qaMode ? `QA: ${lead.name}` : lead.name;
 
   const data = await fetchJson(
     "https://api.resend.com/emails",
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_KEY}`,
-        "Content-Type": "application/json",
-      },
-    },
+    { method: "POST", headers: { Authorization: `Bearer ${RESEND_KEY}`, "Content-Type": "application/json" } },
     {
       from: FROM,
       reply_to: REPLY_TO,
@@ -361,6 +303,7 @@ async function sendEmail(lead, subject, body, qaMode) {
   return data.id;
 }
 
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 function ask(question) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   return new Promise(resolve => rl.question(question, ans => { rl.close(); resolve(ans.trim().toLowerCase()); }));
@@ -373,13 +316,13 @@ async function main() {
   const missing = ["ANTHROPIC_API_KEY", "RESEND_API_KEY", "GITHUB_TOKEN"].filter(k => !process.env[k]);
   if (missing.length) {
     console.error(`❌ Missing env vars: ${missing.join(", ")}`);
-    console.error(`   Run: export ANTHROPIC_API_KEY=... RESEND_API_KEY=... GITHUB_TOKEN=...`);
+    console.error(`   export ANTHROPIC_API_KEY=... RESEND_API_KEY=re_J1nFzSKX_... GITHUB_TOKEN=...`);
     process.exit(1);
   }
 
   console.log("\n🧬 GeneticTesting.com Campaign Sender");
   console.log("─".repeat(50));
-  if (QA_MODE) console.log(`⚠️  QA MODE — all emails go to ${QA_EMAIL}`);
+  if (QA_MODE) console.log(`⚠️  QA MODE — all emails go to ${QA_EMAIL}\n`);
 
   if (!fs.existsSync(CSV_PATH)) {
     console.error(`❌ CSV not found: ${CSV_PATH}`);
@@ -391,29 +334,20 @@ async function main() {
   const rejectedEmails = loadRejectedEmails();
 
   let sentCompanies = new Set();
-  try {
-    const data = JSON.parse(fs.readFileSync(SENT_LOG_PATH, "utf8"));
-    data.forEach(e => { if (e.company) sentCompanies.add(normalizeCompany(e.company)); });
-  } catch {}
+  try { JSON.parse(fs.readFileSync(SENT_LOG_PATH, "utf8")).forEach(e => { if (e.company) sentCompanies.add(normalizeCompany(e.company)); }); } catch {}
   let rejectedCompanies = new Set();
-  try {
-    const data = JSON.parse(fs.readFileSync(REJECTED_LOG_PATH, "utf8"));
-    data.forEach(e => { if (e.company) rejectedCompanies.add(normalizeCompany(e.company)); });
-  } catch {}
+  try { JSON.parse(fs.readFileSync(REJECTED_LOG_PATH, "utf8")).forEach(e => { if (e.company) rejectedCompanies.add(normalizeCompany(e.company)); }); } catch {}
 
   const pending = allLeads.filter(l => {
-    const emailLower = l.email.toLowerCase();
-    const companyNorm = normalizeCompany(l.company);
-    return !sentEmails.has(emailLower) &&
-           !rejectedEmails.has(emailLower) &&
-           !sentCompanies.has(companyNorm) &&
-           !rejectedCompanies.has(companyNorm);
+    const em = l.email.toLowerCase();
+    const co = normalizeCompany(l.company);
+    return !sentEmails.has(em) && !rejectedEmails.has(em) && !sentCompanies.has(co) && !rejectedCompanies.has(co);
   });
 
-  console.log(`📋 Total in CSV:       ${allLeads.length}`);
-  console.log(`✅ Already sent:        ${sentEmails.size} emails / ${sentCompanies.size} companies`);
-  console.log(`🚫 Rejected:            ${rejectedCompanies.size} companies`);
-  console.log(`📬 Pending to send:     ${pending.length}`);
+  console.log(`📋 Total in CSV:        ${allLeads.length}`);
+  console.log(`✅ Already sent:         ${sentEmails.size} emails / ${sentCompanies.size} companies`);
+  console.log(`🚫 Rejected:             ${rejectedCompanies.size} companies`);
+  console.log(`📬 Pending to send:      ${pending.length}`);
 
   if (pending.length === 0) {
     console.log("\n✨ All contacts have been emailed already.");
@@ -438,6 +372,7 @@ async function main() {
     console.log(`👤 ${lead.name} — ${lead.title} @ ${lead.company}`);
     console.log(`📧 ${lead.email}`);
 
+    // Score
     process.stdout.write("   Scoring...");
     const score = await scoreRelevance(lead);
     const scoreEmoji = score.verdict === "YES" ? "✅" : score.verdict === "MAYBE" ? "🟡" : "❌";
@@ -450,6 +385,7 @@ async function main() {
       continue;
     }
 
+    // Publish listing
     process.stdout.write("   Publishing listing...");
     let listingUrl = null;
     try {
@@ -460,6 +396,7 @@ async function main() {
       console.log(` ⚠️  ${err.message}`);
     }
 
+    // Generate email
     process.stdout.write("   Generating email...");
     let subject, body;
     try {
@@ -471,20 +408,7 @@ async function main() {
       continue;
     }
 
-    // Preview email — require explicit approval before sending
-    console.log("\n   ┌─ EMAIL PREVIEW " + "─".repeat(32));
-    console.log(`   │ To:       ${lead.name} <${lead.email}>`);
-    console.log(`   │ Subject:  ${subject}`);
-    console.log(`   │ Reply-To: ${REPLY_TO}`);
-    console.log("   │");
-    body.split("\n").slice(0, 8).forEach(line => console.log(`   │ ${line}`));
-    if (body.split("\n").length > 8) console.log("   │ [...]");
-    console.log("   └" + "─".repeat(48));
-
-    const approve = await ask("   Send this email? (y/n/q to quit): ");
-    if (approve === "q") { console.log("\nStopped by user."); break; }
-    if (approve !== "y") { console.log("   Skipped."); skipped++; continue; }
-
+    // Send
     process.stdout.write("   Sending...");
     try {
       await sendEmail(lead, subject, body, QA_MODE);

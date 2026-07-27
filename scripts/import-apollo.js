@@ -18,6 +18,14 @@ const CATEGORIES = [
   "Research Tools", "Genetic Counseling",
 ];
 
+const TEST_TYPES = [
+  "Whole Genome Sequencing", "Whole Exome Sequencing", "Gene Panel Testing",
+  "SNP Genotyping", "NIPT", "Carrier Screening", "Newborn Screening",
+  "Hereditary Cancer Testing", "Pharmacogenomics Testing", "Liquid Biopsy",
+  "Tumor Profiling", "Ancestry & Ethnicity", "RNA Sequencing", "Epigenomics",
+  "Rare Disease Diagnosis", "Chromosomal Microarray", "FISH", "Methylation Analysis",
+];
+
 function parseCsvLine(line) {
   const cells = []; let cur = "", inQ = false;
   for (let i = 0; i < line.length; i++) {
@@ -97,8 +105,9 @@ Keywords: ${company.keywords}
 
 1. Write a 1-sentence description (max 160 chars) of what this company does in genetic testing/genomics.
 2. Pick the best category from: ${CATEGORIES.join(" | ")}
+3. Pick up to 4 test types this company likely offers from: ${TEST_TYPES.join(" | ")} — return empty array if unknown.
 
-Return JSON only: {"description": "...", "category": "..."}`,
+Return JSON only: {"description": "...", "category": "...", "tests": [...]}`,
       }],
     }
   );
@@ -107,7 +116,7 @@ Return JSON only: {"description": "...", "category": "..."}`,
   try {
     return JSON.parse(text);
   } catch {
-    return { description: `${company.name} is a genetic testing company.`, category: "Clinical Diagnostics" };
+    return { description: `${company.name} is a genetic testing company.`, category: "Clinical Diagnostics", tests: [] };
   }
 }
 
@@ -154,14 +163,17 @@ async function main() {
     }
 
     const safeName = c.name.includes(":") ? `"${c.name}"` : c.name;
+    const testsYaml = (info.tests || []).length > 0
+      ? `\ntests:\n${info.tests.map(t => `  - "${t}"`).join("\n")}`
+      : "";
     const content = `---
 name: ${safeName}
 slug: ${slug}
 category: ${info.category}
-description: ${info.description}
+description: "${(info.description || "").replace(/"/g, "'")}"
 website: ${c.website}
 funding: ${c.funding || "Unknown"}
-location: ${c.location}
+location: ${c.location}${testsYaml}
 tier: free
 featured: false
 date: ${new Date().toISOString().split("T")[0]}

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-Posts new genetictesting.com news articles to LinkedIn via Buffer.
-Tracks already-posted articles in content/news/.linkedin-posted.json.
-Outputs the post payload as JSON to stdout — actual Buffer API call
-is made by the calling agent (Claude) using Buffer MCP tools.
+Posts new genetictesting.com news articles to LinkedIn and X via Buffer.
+Outputs post payloads as JSON to stdout — actual Buffer API calls
+are made by the calling agent (Claude) using Buffer MCP tools.
+
+LinkedIn channel : (no LinkedIn page connected yet for genetic)
+X channel        : 6a4cf3ff40483446287c3dd1  (@alon_braun)
 """
 
 import os, re, json, glob, sys
@@ -29,6 +31,15 @@ CATEGORY_HOOKS = {
     "Policy":   "⚖️ A policy shift that could reshape the field.",
 }
 DEFAULT_HOOK = "🧬 What's new in genetic testing."
+
+X_HASHTAGS = {
+    "Funding":  "#genomics #precisionmedicine",
+    "Research": "#genomics #genetics",
+    "Product":  "#genomics #healthtech",
+    "Industry": "#genomics #DNAtesting",
+    "Policy":   "#genomics #healthcare",
+}
+DEFAULT_X_HASHTAGS = "#genomics #precisionmedicine"
 
 
 def parse_frontmatter(filepath):
@@ -70,6 +81,17 @@ def make_post_copy(title, excerpt, category, slug):
     text = f"{hook}\n\n{title}\n\n{excerpt}\n\nRead more on GeneticTesting.com 👉 {url}\n\n{' '.join(hashtags)}"
     return text
 
+def make_x_copy(title, category, slug):
+    url = f"{SITE_URL}/news/{slug}"
+    hashtags = X_HASHTAGS.get(category, DEFAULT_X_HASHTAGS)
+    hook = CATEGORY_HOOKS.get(category, DEFAULT_HOOK)
+    tweet = f"{hook}\n\n{title}\n\n{url}\n\n{hashtags}"
+    if len(tweet) > 280:
+        overhead = len(f"{hook}\n\n...\n\n{url}\n\n{hashtags}")
+        max_title = 280 - overhead - 3
+        tweet = f"{hook}\n\n{title[:max_title]}...\n\n{url}\n\n{hashtags}"
+    return tweet
+
 
 def utf16_len(s):
     return len(s.encode("utf-16-le")) // 2
@@ -92,6 +114,7 @@ def main():
         if fm.get("sponsored", "false").lower() == "true":
             continue
         text = make_post_copy(fm.get("title", ""), fm.get("excerpt", ""), fm.get("category", ""), slug)
+        text_x = make_x_copy(fm.get("title", ""), fm.get("category", ""), slug)
         pending.append({
             "slug": slug,
             "title": fm.get("title", ""),
@@ -99,6 +122,7 @@ def main():
             "category": fm.get("category", ""),
             "date": fm.get("date", ""),
             "text": text,
+            "text_x": text_x,
             "annotations": [],
         })
 

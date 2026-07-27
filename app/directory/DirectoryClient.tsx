@@ -4,6 +4,27 @@ import Link from "next/link";
 
 const CATEGORIES = ["All", "Consumer DNA Testing", "Clinical Diagnostics", "Oncology Genomics", "Pharmacogenomics", "Prenatal Testing", "Ancestry & Genealogy", "Research Tools", "Genetic Counseling"];
 
+export const TEST_TYPES = [
+  "Whole Genome Sequencing",
+  "Whole Exome Sequencing",
+  "Gene Panel Testing",
+  "SNP Genotyping",
+  "NIPT",
+  "Carrier Screening",
+  "Newborn Screening",
+  "Hereditary Cancer Testing",
+  "Pharmacogenomics Testing",
+  "Liquid Biopsy",
+  "Tumor Profiling",
+  "Ancestry & Ethnicity",
+  "RNA Sequencing",
+  "Epigenomics",
+  "Rare Disease Diagnosis",
+  "Chromosomal Microarray",
+  "FISH",
+  "Methylation Analysis",
+];
+
 const AVATAR_COLORS = [
   ["#d4f0e2", "#0d4a2a"],
   ["#d4ede0", "#0a3d22"],
@@ -19,19 +40,36 @@ function initials(name: string) {
 function avatarColor(name: string) {
   return AVATAR_COLORS[name.charCodeAt(0) % AVATAR_COLORS.length];
 }
+function parseTests(raw: any): string[] {
+  if (!raw) return [];
+  if (Array.isArray(raw)) return raw;
+  if (typeof raw === "string") return raw.split(",").map((t: string) => t.trim()).filter(Boolean);
+  return [];
+}
 
 export default function DirectoryClient({ companies }: { companies: any[] }) {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [activeTest, setActiveTest] = useState("All");
   const [search, setSearch] = useState("");
+  const [showTestFilter, setShowTestFilter] = useState(false);
 
   const filtered = companies.filter((c) => {
     const matchCat = activeCategory === "All" || c.category === activeCategory;
+    const matchTest = activeTest === "All" || parseTests(c.tests).includes(activeTest);
     const matchSearch = !search || c.name.toLowerCase().includes(search.toLowerCase()) || (c.description || "").toLowerCase().includes(search.toLowerCase());
-    return matchCat && matchSearch;
+    return matchCat && matchTest && matchSearch;
   });
 
   const premium = filtered.filter((c) => c.tier === "premium");
   const free = filtered.filter((c) => c.tier !== "premium");
+
+  // Count companies per test type (unfiltered by test, so counts stay stable)
+  const testCounts: Record<string, number> = {};
+  companies.forEach((c) => {
+    parseTests(c.tests).forEach((t) => {
+      testCounts[t] = (testCounts[t] || 0) + 1;
+    });
+  });
 
   return (
     <>
@@ -57,31 +95,89 @@ export default function DirectoryClient({ companies }: { companies: any[] }) {
       </section>
 
       <div className="max-w-7xl mx-auto px-5 py-10">
-        <div className="flex flex-wrap gap-2 mb-10">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`text-sm px-4 py-1.5 rounded-full border transition-colors font-medium cursor-pointer ${
-                activeCategory === cat
-                  ? "bg-[#0d4a2a] text-white border-[#0d4a2a]"
-                  : "border-gray-200 text-gray-600 hover:border-[#0d4a2a] hover:text-[#0d4a2a] hover:bg-[#e8f5ee]"
-              }`}
-            >
-              {cat}
-              {cat !== "All" && (
-                <span className={`ml-1.5 text-xs ${activeCategory === cat ? "text-white/70" : "text-gray-400"}`}>
-                  {companies.filter((c) => c.category === cat).length}
-                </span>
-              )}
-            </button>
-          ))}
+
+        {/* Category filter */}
+        <div className="mb-4">
+          <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-2">Filter by category</p>
+          <div className="flex flex-wrap gap-2">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`text-sm px-4 py-1.5 rounded-full border transition-colors font-medium cursor-pointer ${
+                  activeCategory === cat
+                    ? "bg-[#0d4a2a] text-white border-[#0d4a2a]"
+                    : "border-gray-200 text-gray-600 hover:border-[#0d4a2a] hover:text-[#0d4a2a] hover:bg-[#e8f5ee]"
+                }`}
+              >
+                {cat}
+                {cat !== "All" && (
+                  <span className={`ml-1.5 text-xs ${activeCategory === cat ? "text-white/70" : "text-gray-400"}`}>
+                    {companies.filter((c) => c.category === cat).length}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* Test type filter */}
+        <div className="mb-8">
+          <button
+            onClick={() => setShowTestFilter(!showTestFilter)}
+            className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-2 flex items-center gap-2 hover:text-[#0d4a2a] transition-colors cursor-pointer"
+          >
+            Filter by test type
+            {activeTest !== "All" && <span className="bg-[#0d4a2a] text-white text-[9px] px-2 py-0.5 rounded-full">{activeTest}</span>}
+            <span className="text-gray-300">{showTestFilter ? "▲" : "▼"}</span>
+          </button>
+          {showTestFilter && (
+            <div className="flex flex-wrap gap-2 mt-2">
+              <button
+                onClick={() => setActiveTest("All")}
+                className={`text-xs px-3 py-1 rounded-full border transition-colors cursor-pointer ${
+                  activeTest === "All" ? "bg-[#0d4a2a] text-white border-[#0d4a2a]" : "border-gray-200 text-gray-500 hover:border-[#0d4a2a] hover:text-[#0d4a2a]"
+                }`}
+              >
+                All tests
+              </button>
+              {TEST_TYPES.filter((t) => testCounts[t] > 0).map((t) => (
+                <button
+                  key={t}
+                  onClick={() => setActiveTest(t)}
+                  className={`text-xs px-3 py-1 rounded-full border transition-colors cursor-pointer ${
+                    activeTest === t ? "bg-[#0d4a2a] text-white border-[#0d4a2a]" : "border-gray-200 text-gray-500 hover:border-[#0d4a2a] hover:text-[#0d4a2a] hover:bg-[#e8f5ee]"
+                  }`}
+                >
+                  {t}
+                  <span className={`ml-1 ${activeTest === t ? "text-white/70" : "text-gray-400"}`}>
+                    {testCounts[t]}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Active filters summary */}
+        {(activeCategory !== "All" || activeTest !== "All" || search) && (
+          <div className="flex items-center gap-2 mb-6 text-sm text-gray-500">
+            <span>Showing <strong className="text-gray-900">{filtered.length}</strong> companies</span>
+            {activeCategory !== "All" && <span className="bg-[#e8f5ee] text-[#0d4a2a] text-xs px-2 py-0.5 rounded-full">{activeCategory}</span>}
+            {activeTest !== "All" && <span className="bg-[#e8f5ee] text-[#0d4a2a] text-xs px-2 py-0.5 rounded-full">{activeTest}</span>}
+            <button
+              onClick={() => { setActiveCategory("All"); setActiveTest("All"); setSearch(""); }}
+              className="ml-auto text-xs text-gray-400 hover:text-gray-700 underline cursor-pointer"
+            >
+              Clear all
+            </button>
+          </div>
+        )}
 
         {filtered.length === 0 ? (
           <div className="text-center py-20">
             <p className="text-gray-400 text-lg">No companies found.</p>
-            <button onClick={() => { setActiveCategory("All"); setSearch(""); }} className="mt-4 text-sm text-[#0d4a2a] hover:underline">
+            <button onClick={() => { setActiveCategory("All"); setActiveTest("All"); setSearch(""); }} className="mt-4 text-sm text-[#0d4a2a] hover:underline cursor-pointer">
               Clear filters
             </button>
           </div>
@@ -93,6 +189,7 @@ export default function DirectoryClient({ companies }: { companies: any[] }) {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {premium.map((c) => {
                     const [bg, fg] = avatarColor(c.name);
+                    const tests = parseTests(c.tests).slice(0, 3);
                     return (
                       <Link key={c.slug} href={`/directory/${c.slug}`} className="rounded-2xl p-6 bg-[#edfaf3] border border-[#0d4a2a]/25 hover:-translate-y-0.5 hover:shadow-md transition-all block">
                         <div className="flex items-center gap-3 mb-4">
@@ -106,6 +203,13 @@ export default function DirectoryClient({ companies }: { companies: any[] }) {
                           <span className="text-xs bg-[#0d4a2a] text-white px-2.5 py-1 rounded-full font-medium shrink-0">Featured</span>
                         </div>
                         <p className="text-sm text-gray-700 leading-relaxed">{c.description}</p>
+                        {tests.length > 0 && (
+                          <div className="flex flex-wrap gap-1.5 mt-3">
+                            {tests.map((t: string) => (
+                              <span key={t} className="text-[10px] bg-white border border-[#0d4a2a]/15 text-[#0d4a2a] px-2 py-0.5 rounded-full font-medium">{t}</span>
+                            ))}
+                          </div>
+                        )}
                         <div className="flex items-center gap-2 mt-4">
                           {c.funding && c.funding !== "Unknown" && (
                             <span className="text-xs text-gray-500 bg-white border border-gray-100 px-2 py-0.5 rounded-full">{c.funding}</span>
@@ -113,7 +217,7 @@ export default function DirectoryClient({ companies }: { companies: any[] }) {
                           <span className="ml-auto text-sm font-medium text-[#0d4a2a]">View profile →</span>
                         </div>
                       </Link>
-                  );
+                    );
                   })}
                 </div>
               </div>
@@ -125,6 +229,7 @@ export default function DirectoryClient({ companies }: { companies: any[] }) {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {free.map((c) => {
                 const [bg, fg] = avatarColor(c.name);
+                const tests = parseTests(c.tests).slice(0, 3);
                 return (
                   <Link key={c.slug} href={`/directory/${c.slug}`} className="rounded-2xl p-5 bg-white border border-gray-100 hover:border-[#0d4a2a]/20 hover:-translate-y-0.5 hover:shadow-sm transition-all block">
                     <div className="flex items-center gap-3 mb-3">
@@ -137,6 +242,13 @@ export default function DirectoryClient({ companies }: { companies: any[] }) {
                       </div>
                     </div>
                     <p className="text-sm text-gray-600 leading-relaxed line-clamp-2">{c.description}</p>
+                    {tests.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mt-2.5">
+                        {tests.map((t: string) => (
+                          <span key={t} className="text-[10px] bg-[#e8f5ee] text-[#0d4a2a] px-2 py-0.5 rounded-full font-medium">{t}</span>
+                        ))}
+                      </div>
+                    )}
                     <div className="flex items-center mt-3 gap-2">
                       {c.location && <span className="text-xs text-gray-400">{c.location}</span>}
                       <span className="ml-auto text-xs text-[#0d4a2a] shrink-0 font-medium">View profile →</span>

@@ -1069,5 +1069,11 @@
     "company": "Precision For Medicine",
     "rejected_at": "2026-06-26T09:24:42.494Z",
     "reason": "Precision For Medicine appears to be a clinical research organization focused on trial management and patient recruitment, not a genetic testing or genomics company."
+  },
+  {
+    "email": "patterson.yeoh@yourgenehealth.com",
+    "company": "Yourgene Health",
+    "rejected_at": "2026-07-22T11:37:42.336Z",
+    "reason": "Called it spam — remove and do not contact"
   }
 ]

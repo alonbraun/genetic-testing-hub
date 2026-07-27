@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "email": "murilo@mydnadigital.com",
+    "name": "Murilo Arruda",
+    "company": "MyDNA",
+    "title": "Founder & CEO",
+    "subject": "MyDNA on GeneticTesting.com — advertising opportunities",
+    "body": "Hi Murilo,\n\nI noticed MyDNA's listing is live on GeneticTesting.com, and it looks great. We're building the go-to resource for anyone exploring genetic testing options, and companies like yours are central to that mission.\n\nI wanted to reach out because we're actively working with testing providers on advertising—whether that's newsletter sponsorships, featured placements, or other ways to increase visibility within our community. Given what you're building at MyDNA, I think there could be a real fit.\n\nWould you be open to a quick conversation about how we might help you reach more people? Feel free to check out our advertising options here: https://genetictesting.com/advertise\n\nLooking forward to connecting.\n\nAlon Braun\nGeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/mydna",
+    "site": "genetic",
+    "score": 7,
+    "reason": "pre-approved",
+    "queued_at": "2026-07-22T18:10:14.886Z"
+  }
+]
