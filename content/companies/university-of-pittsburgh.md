@@ -2,7 +2,7 @@
 name: "University of Pittsburgh"
 slug: university-of-pittsburgh
 category: Genetic Testing
-description: "The University of Pittsburgh is an academic research institution that conducts advanced genetic testing research and provides educational programs in genomics and personalized medicine. The university leverages its scientific expertise to contribute to the development and validation of genetic testing methodologies and clinical applications."
+description: "The University of Pittsburgh is a major research institution that conducts extensive genetic testing research and clinical studies across multiple disciplines including medicine, genetics, and biomedical sciences. The university provides educational programs, laboratory services, and participates in genetic research initiatives that advance the field of personalized medicine and genetic diagnostics."
 website: 
 funding: Private
 location: ""
