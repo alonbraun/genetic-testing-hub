@@ -1,12 +1,12 @@
 ---
-name: AncestryDNA
+name: "Ancestry"
 slug: ancestry
-category: Ancestry & Genealogy
-description: AncestryDNA is the world's largest consumer genetics testing service with over 22 million customers, providing ethnicity estimates, relative matching, and family history tools through its integrated genealogy platform.
-website: https://www.ancestry.com/dna
+category: Genetic Testing
+description: "Ancestry is a leading consumer genetics company that provides DNA testing services to help individuals discover their family history, ethnic background, and genetic heritage. The company offers comprehensive ancestry reports and connects users with relatives through its extensive database of genetic profiles."
+website: 
 funding: Private
-location: Lehi, UT
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-29
 ---
