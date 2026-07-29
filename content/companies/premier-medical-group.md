@@ -2,7 +2,7 @@
 name: "Premier Medical Group"
 slug: premier-medical-group
 category: Genetic Testing
-description: "Premier Medical Group provides comprehensive genetic testing services and personalized medical diagnostics to help patients and healthcare providers make informed decisions about disease risk and treatment options. The company specializes in delivering accurate laboratory analysis and clinical interpretation of genetic data across a range of hereditary conditions and pharmacogenetic applications."
+description: "Premier Medical Group is a healthcare provider offering comprehensive genetic testing services to help patients understand their hereditary health risks and genetic predispositions. The group combines advanced genomic analysis with clinical expertise to deliver personalized diagnostic and preventive care solutions."
 website: 
 funding: Private
 location: ""
