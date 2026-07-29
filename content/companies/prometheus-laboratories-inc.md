@@ -1,12 +1,12 @@
 ---
-name: Prometheus Laboratories Inc.
+name: "Prometheus Laboratories Inc."
 slug: prometheus-laboratories-inc
-category: Clinical Diagnostics
-description: Prometheus Laboratories provides precision-guided molecular diagnostic testing and biomarker-based risk stratification for gastroenterology and other clinical conditions.
-website: https://prometheuslabs.com
-funding: $522,547,453
-location: San Diego, California, United States
+category: Genetic Testing
+description: "Prometheus Laboratories Inc. is a genetic testing provider offering comprehensive diagnostic and analytical services for clinical and research applications. The company specializes in molecular testing solutions designed to support healthcare providers and patients in disease detection, risk assessment, and treatment planning."
+website: 
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-29
 ---
