@@ -1,12 +1,12 @@
 ---
-name: Devyser
+name: "Devyser"
 slug: devyser
-category: Clinical Diagnostics
-description: Devyser develops in vitro diagnostic kits and NGS solutions for prenatal, hereditary disease, and cancer genomics testing.
-website: https://devyser.com
-funding: Unknown
-location: Stockholm, Stockholm County, Sweden
+category: Genetic Testing
+description: "Devyser is a genetic testing company specializing in cytogenetics and molecular diagnostics solutions for clinical laboratories and healthcare providers. The company develops and provides diagnostic assays and instruments designed to support accurate genetic analysis and disease detection."
+website: 
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-29
 ---
