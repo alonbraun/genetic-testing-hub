@@ -1,12 +1,12 @@
 ---
-name: Sequencing
+name: "Sequencing"
 slug: sequencing
-category: Consumer DNA Testing
-description: Sequencing.com provides genome interpretation, storage, and analysis software enabling personalized wellness insights and pharmacogenomics from DNA data.
-website: https://sequencing.com
-funding: $5,000,000
-location: Pasadena, California, United States
+category: Genetic Testing
+description: "Sequencing is a genetic testing provider offering DNA analysis and sequencing services to support personalized medicine and health insights. The company delivers genomic testing solutions for individuals and healthcare professionals seeking comprehensive genetic information."
+website: 
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-29
 ---
