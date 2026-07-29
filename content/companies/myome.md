@@ -1,12 +1,12 @@
 ---
-name: MyOme
+name: "MyOme"
 slug: myome
-category: Clinical Diagnostics
-description: MyOme provides genome-based diagnostics using integrated polygenic risk scores to deliver personalized health insights and lifelong genomic risk modeling.
-website: https://myome.com
-funding: $36,000,000
-location: Palo Alto, California, United States
+category: Genetic Testing
+description: "MyOme is a genetic testing company that provides personalized health and wellness insights based on individual DNA analysis. The company offers comprehensive genomic testing services designed to help clients make informed decisions about their health, nutrition, and lifestyle management."
+website: 
+funding: Private
+location: ""
 tier: free
 featured: false
-date: 2026-06-23
+date: 2026-07-29
 ---
