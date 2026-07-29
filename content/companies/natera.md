@@ -1,12 +1,12 @@
 ---
-name: Natera
+name: "Natera"
 slug: natera
-category: Prenatal Testing
-description: Natera is a global diagnostics company specializing in cell-free DNA testing for prenatal screening, oncology, and organ health, with its flagship Panorama NIPT test used in millions of pregnancies annually.
-website: https://www.natera.com
-funding: Public (NTRA)
-location: Austin, TX
+category: Genetic Testing
+description: "Natera is a leading genetic testing company that provides non-invasive prenatal testing, carrier screening, and reproductive health solutions for prenatal and postnatal diagnostics. The company serves healthcare providers and patients with advanced molecular testing technologies designed to detect genetic abnormalities and inform clinical decision-making."
+website: 
+funding: Private
+location: ""
 tier: free
-featured: true
-date: 2026-06-23
+featured: false
+date: 2026-07-29
 ---
