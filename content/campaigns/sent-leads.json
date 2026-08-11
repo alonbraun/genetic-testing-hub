@@ -6798,5 +6798,533 @@
     "subject": "Your Healx listing is live on GeneticTesting.com",
     "listingUrl": "https://genetictesting.com/directory/healx",
     "sent_at": "2026-08-10T08:29:30.845Z"
+  },
+  {
+    "email": "chris.hampe@immusoft.com",
+    "name": "Chris Hampe",
+    "company": "Immusoft",
+    "subject": "Immusoft's listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/immusoft",
+    "sent_at": "2026-08-11T08:07:01.010Z"
+  },
+  {
+    "email": "amorton@hotspotthera.com",
+    "name": "Andrew Morton",
+    "company": "HotSpot Therapeutics, Inc.",
+    "subject": "HotSpot Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/hotspot-therapeutics-inc",
+    "sent_at": "2026-08-11T08:07:04.120Z"
+  },
+  {
+    "email": "a.kumar@gracetx.com",
+    "name": "Amresh Kumar",
+    "company": "Grace Therapeutics, Inc.",
+    "subject": "Grace Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/grace-therapeutics-inc",
+    "sent_at": "2026-08-11T08:07:07.243Z"
+  },
+  {
+    "email": "rachel.mcminn@neurogene.com",
+    "name": "Rachel McMinn",
+    "company": "Neurogene Inc.",
+    "subject": "Neurogene Inc. on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/neurogene-inc",
+    "sent_at": "2026-08-11T08:07:10.368Z"
+  },
+  {
+    "email": "malexander@ovidrx.com",
+    "name": "Meg Alexander",
+    "company": "Ovid Therapeutics",
+    "subject": "Ovid Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/ovid-therapeutics",
+    "sent_at": "2026-08-11T08:07:13.492Z"
+  },
+  {
+    "email": "mfactor@intrabio.com",
+    "name": "Mallory Factor",
+    "company": "IntraBio Inc",
+    "subject": "IntraBio Inc is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/intrabio-inc",
+    "sent_at": "2026-08-11T08:07:16.596Z"
+  },
+  {
+    "email": "khawryluk@mbxbio.com",
+    "name": "Kent Hawryluk",
+    "company": "MBX Biosciences, Inc.",
+    "subject": "MBX Biosciences on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/mbx-biosciences-inc",
+    "sent_at": "2026-08-11T08:07:19.728Z"
+  },
+  {
+    "email": "fernando@kamadaimoveis.com.br",
+    "name": "Fernando Kamada",
+    "company": "KAMADA",
+    "subject": "KAMADA's listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/kamada",
+    "sent_at": "2026-08-11T08:07:22.841Z"
+  },
+  {
+    "email": "david.loew@ipsen.com",
+    "name": "David Loew",
+    "company": "Ipsen",
+    "subject": "Ipsen on GeneticTesting.com — advertising opportunity",
+    "listingUrl": "https://genetictesting.com/directory/ipsen",
+    "sent_at": "2026-08-11T08:07:25.962Z"
+  },
+  {
+    "email": "giuseppe.izzi@leadiant.com",
+    "name": "Giuseppe Izzi",
+    "company": "Leadiant Biosciences, Inc.",
+    "subject": "Leadiant's profile on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/leadiant-biosciences-inc",
+    "sent_at": "2026-08-11T08:07:29.065Z"
+  },
+  {
+    "email": "ilombardo@noemapharma.com",
+    "name": "Ilise Lombardo",
+    "company": "Noema Pharma",
+    "subject": "Noema Pharma's profile is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/noema-pharma",
+    "sent_at": "2026-08-11T08:07:32.181Z"
+  },
+  {
+    "email": "jesse.shefferman@protaratx.com",
+    "name": "Jesse Shefferman",
+    "company": "Protara Therapeutics",
+    "subject": "Protara Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/protara-therapeutics",
+    "sent_at": "2026-08-11T08:07:35.300Z"
+  },
+  {
+    "email": "frank.thomas@orchard-tx.com",
+    "name": "Frank Thomas",
+    "company": "Orchard Therapeutics - U.S.",
+    "subject": "Orchard Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/orchard-therapeutics-u-s",
+    "sent_at": "2026-08-11T08:07:38.406Z"
+  },
+  {
+    "email": "fconway@larimartx.com",
+    "name": "Frank Conway",
+    "company": "Larimar Therapeutics Inc.",
+    "subject": "Larimar Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/larimar-therapeutics-inc",
+    "sent_at": "2026-08-11T08:07:41.577Z"
+  },
+  {
+    "email": "phufner@passagebio.com",
+    "name": "Pamela Hufner",
+    "company": "Passage Bio",
+    "subject": "Passage Bio's profile on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/passage-bio",
+    "sent_at": "2026-08-11T08:07:44.689Z"
+  },
+  {
+    "email": "dcunningham@kerostx.com",
+    "name": "Dennis Cunningham",
+    "company": "Keros Therapeutics",
+    "subject": "Keros Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/keros-therapeutics",
+    "sent_at": "2026-08-11T08:07:47.798Z"
+  },
+  {
+    "email": "russell.gotschall@m6ptherapeutics.com",
+    "name": "Russell Gotschall",
+    "company": "M6P Therapeutics",
+    "subject": "M6P Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/m6p-therapeutics",
+    "sent_at": "2026-08-11T08:07:50.932Z"
+  },
+  {
+    "email": "mgentle@lumos-pharma.com",
+    "name": "Maggi Gentle",
+    "company": "Lumos Pharma",
+    "subject": "Lumos Pharma's profile is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/lumos-pharma",
+    "sent_at": "2026-08-11T08:07:54.046Z"
+  },
+  {
+    "email": "kitch@rosebudbiosci.com",
+    "name": "Kitch Wilson",
+    "company": "Rosebud Biosciences",
+    "subject": "Rosebud Biosciences is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/rosebud-biosciences",
+    "sent_at": "2026-08-11T08:07:57.183Z"
+  },
+  {
+    "email": "matthew.klein@ptcbio.com",
+    "name": "Matthew Klein",
+    "company": "PTC Therapeutics, Inc.",
+    "subject": "PTC Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/ptc-therapeutics-inc",
+    "sent_at": "2026-08-11T08:08:00.301Z"
+  },
+  {
+    "email": "dingram@sarepta.com",
+    "name": "Douglas Ingram",
+    "company": "Sarepta Therapeutics",
+    "subject": "Sarepta's listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/sarepta-therapeutics",
+    "sent_at": "2026-08-11T08:08:03.437Z"
+  },
+  {
+    "email": "eric.dube@travere.com",
+    "name": "Eric Dube",
+    "company": "Travere Therapeutics",
+    "subject": "Your Travere Therapeutics listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/travere-therapeutics",
+    "sent_at": "2026-08-11T08:08:06.555Z"
+  },
+  {
+    "email": "jszwarcberg@sprucebio.com",
+    "name": "Javier Szwarcberg",
+    "company": "Spruce Biosciences",
+    "subject": "Spruce Biosciences is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/spruce-biosciences",
+    "sent_at": "2026-08-11T08:08:09.660Z"
+  },
+  {
+    "email": "snolan@tayshagtx.com",
+    "name": "Sean Nolan",
+    "company": "Taysha Gene Therapies",
+    "subject": "Taysha Gene Therapies is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/taysha-gene-therapies",
+    "sent_at": "2026-08-11T08:08:12.771Z"
+  },
+  {
+    "email": "mmyers@quoinpharma.com",
+    "name": "Michael Myers",
+    "company": "Quoin Pharmaceuticals",
+    "subject": "Quoin Pharmaceuticals on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/quoin-pharmaceuticals",
+    "sent_at": "2026-08-11T08:08:15.899Z"
+  },
+  {
+    "email": "jason.wassell@regeneron.com",
+    "name": "Jason Wassell",
+    "company": "Regeneron",
+    "subject": "Your Regeneron listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/regeneron",
+    "sent_at": "2026-08-11T08:08:19.008Z"
+  },
+  {
+    "email": "agraves@soleno.life",
+    "name": "Annie Graves",
+    "company": "Soleno Therapeutics, Inc.",
+    "subject": "Soleno Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/soleno-therapeutics-inc",
+    "sent_at": "2026-08-11T08:08:22.128Z"
+  },
+  {
+    "email": "bbarry@scholarrock.com",
+    "name": "Barbara Barry",
+    "company": "Scholar Rock",
+    "subject": "Scholar Rock on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/scholar-rock",
+    "sent_at": "2026-08-11T08:08:25.231Z"
+  },
+  {
+    "email": "suden@rallybio.com",
+    "name": "Stephen Uden",
+    "company": "Rallybio",
+    "subject": "Rallybio is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/rallybio",
+    "sent_at": "2026-08-11T08:08:28.336Z"
+  },
+  {
+    "email": "rpalanki@regenxbio.com",
+    "name": "Ram Palanki",
+    "company": "REGENXBIO",
+    "subject": "REGENXBIO's listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/regenxbio",
+    "sent_at": "2026-08-11T08:08:31.457Z"
+  },
+  {
+    "email": "mellis@raretx.com",
+    "name": "Milton Ellis",
+    "company": "Rare Disease Therapeutics, Inc.",
+    "subject": "Rare Disease Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/rare-disease-therapeutics-inc",
+    "sent_at": "2026-08-11T08:08:34.566Z"
+  },
+  {
+    "email": "sclement@saolrx.com",
+    "name": "Susan Clement",
+    "company": "Saol Therapeutics",
+    "subject": "Saol Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/saol-therapeutics",
+    "sent_at": "2026-08-11T08:08:37.684Z"
+  },
+  {
+    "email": "anabulsi@vaderis.com",
+    "name": "Azmi Nabulsi",
+    "company": "Vaderis Therapeutics AG",
+    "subject": "Vaderis Therapeutics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/vaderis-therapeutics-ag",
+    "sent_at": "2026-08-11T08:08:40.810Z"
+  },
+  {
+    "email": "nmcfarlane@zevra.com",
+    "name": "Neil McFarlane",
+    "company": "Zevra Therapeutics",
+    "subject": "Zevra's profile is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/zevra-therapeutics",
+    "sent_at": "2026-08-11T08:08:44.123Z"
+  },
+  {
+    "email": "m.kapusta@uniqure.com",
+    "name": "Matthew Kapusta",
+    "company": "uniQure",
+    "subject": "uniQure's profile is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/uniqure",
+    "sent_at": "2026-08-11T08:08:47.254Z"
+  },
+  {
+    "email": "dimple.patel@naturemetrics.co.uk",
+    "name": "Dimple Patel",
+    "company": "NatureMetrics",
+    "subject": "NatureMetrics is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/naturemetrics",
+    "sent_at": "2026-08-11T08:08:50.357Z"
+  },
+  {
+    "email": "pete.anevski@progyny.com",
+    "name": "Pete Anevski",
+    "company": "Progyny, Inc.",
+    "subject": "Your Progyny listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/progyny-inc",
+    "sent_at": "2026-08-11T08:08:53.464Z"
+  },
+  {
+    "email": "erna.domsgen@immunoivd.com",
+    "name": "Erna Domsgen",
+    "company": "ImmunoIVD AB",
+    "subject": "ImmunoIVD AB on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/immunoivd-ab",
+    "sent_at": "2026-08-11T08:08:56.576Z"
+  },
+  {
+    "email": "linus.bosaeus@raritybioscience.com",
+    "name": "Linus Bosaeus",
+    "company": "Rarity Bioscience",
+    "subject": "Rarity Bioscience on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/rarity-bioscience",
+    "sent_at": "2026-08-11T08:08:59.691Z"
+  },
+  {
+    "email": "jsuzuki@ultragenyx.com",
+    "name": "Jessie Suzuki",
+    "company": "Ultragenyx",
+    "subject": "Ultragenyx on GeneticTesting.com — exploring partnership opportunities",
+    "listingUrl": "https://genetictesting.com/directory/ultragenyx",
+    "sent_at": "2026-08-11T08:09:02.831Z"
+  },
+  {
+    "email": "mlove@natera.com",
+    "name": "Matt Love",
+    "company": "Natera",
+    "subject": "Natera's profile is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/natera",
+    "sent_at": "2026-08-11T08:09:05.953Z"
+  },
+  {
+    "email": "trdepp7@ande.com",
+    "name": "Troy Deppey",
+    "company": "ANDE Rapid DNA",
+    "subject": "ANDE's profile is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/ande-rapid-dna",
+    "sent_at": "2026-08-11T08:09:09.066Z"
+  },
+  {
+    "email": "rpislariu@laurentpharma.com",
+    "name": "Radu Pislariu",
+    "company": "Laurent Pharmaceuticals",
+    "subject": "Laurent Pharmaceuticals on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/laurent-pharmaceuticals",
+    "sent_at": "2026-08-11T08:09:12.184Z"
+  },
+  {
+    "email": "jfaris@pnri.org",
+    "name": "Jack Faris",
+    "company": "Pacific Northwest Research Institute",
+    "subject": "Your Pacific Northwest Research Institute listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/pacific-northwest-research-institute",
+    "sent_at": "2026-08-11T08:09:15.291Z"
+  },
+  {
+    "email": "leofer_knley@harvard.edu",
+    "name": "Leofer Knley",
+    "company": "Harvard University",
+    "subject": "Harvard's listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/harvard-university",
+    "sent_at": "2026-08-11T08:09:18.403Z"
+  },
+  {
+    "email": "steve@confluencepharma.com",
+    "name": "Steve Johns",
+    "company": "Confluence Pharmaceuticals LLC",
+    "subject": "Your Confluence Pharmaceuticals listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/confluence-pharmaceuticals-llc",
+    "sent_at": "2026-08-11T08:09:21.513Z"
+  },
+  {
+    "email": "tbj@udel.edu",
+    "name": "Ted Jackson",
+    "company": "University of Delaware",
+    "subject": "Your University of Delaware listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/university-of-delaware",
+    "sent_at": "2026-08-11T08:09:24.626Z"
+  },
+  {
+    "email": "richard.shan@quintarabio.com",
+    "name": "Richard Shan",
+    "company": "Quintara Biosciences",
+    "subject": "Quintara Biosciences is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/quintara-biosciences",
+    "sent_at": "2026-08-11T08:09:27.745Z"
+  },
+  {
+    "email": "jgalvin@americangene.com",
+    "name": "Jeff Galvin",
+    "company": "American Gene Technologies® International Inc.",
+    "subject": "American Gene Technologies on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/american-gene-technologies-international-inc",
+    "sent_at": "2026-08-11T08:09:30.862Z"
+  },
+  {
+    "email": "jennifer.karson@uvm.edu",
+    "name": "Jennifer Karson",
+    "company": "University of Vermont",
+    "subject": "Your UVM A.I. Research Group is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/university-of-vermont",
+    "sent_at": "2026-08-11T08:09:33.980Z"
+  },
+  {
+    "email": "mlandi@apple-rehab.com",
+    "name": "Michael Landi",
+    "company": "Apple Rehab",
+    "subject": "Apple Rehab is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/apple-rehab",
+    "sent_at": "2026-08-11T08:09:37.114Z"
+  },
+  {
+    "email": "bagnatos@pitt.edu",
+    "name": "Stefano Bagnato",
+    "company": "University of Pittsburgh",
+    "subject": "Your ECP program listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/university-of-pittsburgh",
+    "sent_at": "2026-08-11T08:09:40.230Z"
+  },
+  {
+    "email": "awilliams@vesaliustx.com",
+    "name": "Alison Williams",
+    "company": "Vesalius Therapeutics",
+    "subject": "Vesalius Therapeutics + GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/vesalius-therapeutics",
+    "sent_at": "2026-08-11T08:09:43.343Z"
+  },
+  {
+    "email": "andreas.hoel@a3p.com",
+    "name": "Andreas Hoel",
+    "company": "A3P Biomedical",
+    "subject": "A3P Biomedical's listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/a3p-biomedical",
+    "sent_at": "2026-08-11T08:09:46.459Z"
+  },
+  {
+    "email": "harvey.dong@amoydx.com",
+    "name": "Harvey Dong",
+    "company": "Amoy Diagnostics",
+    "subject": "Amoy Diagnostics on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/amoy-diagnostics",
+    "sent_at": "2026-08-11T08:09:49.650Z"
+  },
+  {
+    "email": "russellt@archerfish.net",
+    "name": "Russell Taylor",
+    "company": "Archerfish Precision Diagnostics",
+    "subject": "Archerfish on GeneticTesting.com — advertising opportunity",
+    "listingUrl": "https://genetictesting.com/directory/archerfish-precision-diagnostics",
+    "sent_at": "2026-08-11T08:09:52.762Z"
+  },
+  {
+    "email": "wayne@hematologics.com",
+    "name": "Wayne Fritschle",
+    "company": "HematoLogics Inc.",
+    "subject": "HematoLogics Inc. on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/hematologics-inc",
+    "sent_at": "2026-08-11T08:09:55.895Z"
+  },
+  {
+    "email": "rdiffley@orasure.com",
+    "name": "Robert Diffley",
+    "company": "OraSure Technologies, Inc.",
+    "subject": "OraSure's profile is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/orasure-technologies-inc",
+    "sent_at": "2026-08-11T08:09:59.017Z"
+  },
+  {
+    "email": "lpritzker@rnadiagnostics.com",
+    "name": "Laura Pritzker",
+    "company": "Rna Diagnostics Inc.",
+    "subject": "RNA Diagnostics' listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/rna-diagnostics-inc",
+    "sent_at": "2026-08-11T08:10:02.140Z"
+  },
+  {
+    "email": "mark@phenomixsciences.com",
+    "name": "Mark Bagnall",
+    "company": "Phenomix Sciences",
+    "subject": "Phenomix Sciences on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/phenomix-sciences",
+    "sent_at": "2026-08-11T08:10:05.249Z"
+  },
+  {
+    "email": "whittney.brady@cchmc.org",
+    "name": "Whittney Brady",
+    "company": "Cincinnati Children's",
+    "subject": "Cincinnati Children's is now on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/cincinnati-children-s",
+    "sent_at": "2026-08-11T08:10:08.389Z"
+  },
+  {
+    "email": "kileyp@premiermed.com",
+    "name": "Kiley Pianis",
+    "company": "Premier Medical Group",
+    "subject": "Premier Medical Group's listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/premier-medical-group",
+    "sent_at": "2026-08-11T08:10:11.506Z"
+  },
+  {
+    "email": "nconfuorto@quanterix.com",
+    "name": "Nick Confuorto",
+    "company": "Akoya Biosciences, Inc.",
+    "subject": "Akoya Biosciences on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/akoya-biosciences-inc",
+    "sent_at": "2026-08-11T08:10:14.674Z"
+  },
+  {
+    "email": "hsharma@bioxcel.com",
+    "name": "Himani Sharma",
+    "company": "BioXcel, LLC",
+    "subject": "BioXcel on GeneticTesting.com — let's talk visibility",
+    "listingUrl": "https://genetictesting.com/directory/bioxcel-llc",
+    "sent_at": "2026-08-11T08:10:17.792Z"
+  },
+  {
+    "email": "benjamin@star-therapeutics.com",
+    "name": "Benjamin Kim",
+    "company": "Star Therapeutics",
+    "subject": "Your Star Therapeutics listing is live on GeneticTesting.com",
+    "listingUrl": "https://genetictesting.com/directory/star-therapeutics",
+    "sent_at": "2026-08-11T08:10:21.505Z"
+  },
+  {
+    "email": "rether.james@sanofi.com",
+    "name": "Rether James",
+    "company": "Sanofi-Aventis U.S. LLC",
+    "subject": "Sanofi-Aventis on GeneticTesting.com – Advertising Opportunity",
+    "listingUrl": "https://genetictesting.com/directory/sanofi-aventis-u-s-llc",
+    "sent_at": "2026-08-11T08:10:24.615Z"
   }
 ]
